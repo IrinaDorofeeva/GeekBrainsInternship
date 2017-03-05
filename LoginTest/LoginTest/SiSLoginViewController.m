@@ -7,6 +7,8 @@
 //
 
 #import "SiSLoginViewController.h"
+#import "SiSLogin.h"
+
 
 @interface SiSLoginViewController () 
 
@@ -56,7 +58,69 @@
         [error addAction:okAction];
         
         [self presentViewController:error animated:YES completion:nil];
+        
+    } else {
+        
+        [self checkPasswordsMatch];
     }
+}
+
+- (void) checkPasswordsMatch {
+    
+    if ([self.passwordFld.text isEqualToString:self.reEnterPasswordFld.text]) {
+        NSLog(@"passwords match!");
+        [self registerNewUser];
+        
+    } else {
+        
+        NSLog(@"passwords don't match");
+        UIAlertController* error = [UIAlertController alertControllerWithTitle:@"Oooops" message:@"Your entered passwords do not match" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction* okAction = [UIAlertAction actionWithTitle:@"ОК"
+                                                           style:UIAlertActionStyleDefault
+                                                         handler:^(UIAlertAction * _Nonnull action) {
+                                                             
+                                                             [self dismissViewControllerAnimated:YES completion:nil];
+                                                             
+                                                         }];
+        
+        
+        [error addAction:okAction];
+        
+        
+        
+        [self presentViewController:error animated:YES completion:nil];
+    
+    }
+}
+
+- (void) registerNewUser {
+    
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    
+    [defaults setObject:self.usernameFld.text forKey:@"username"];
+    [defaults setObject:self.passwordFld.text forKey:@"password"];
+    //[defaults setBool:YES forKey:@"registered"];
+    
+    [defaults synchronize];
+    
+    UIAlertController* success = [UIAlertController alertControllerWithTitle:@"Success" message:@"You have registered a new user" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction* okAction = [UIAlertAction actionWithTitle:@"ОК"
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:^(UIAlertAction * _Nonnull action) {
+                                                         
+                                                         //[self dismissViewControllerAnimated:YES completion:nil];
+                                                         
+                                                         UIStoryboard* sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+                                                         SiSLogin* vc = [sb instantiateViewControllerWithIdentifier:@"SiSLogin"];
+                                                         [self presentViewController:vc animated:YES completion:nil];
+                                                         
+                                                         
+                                                     }];
+    
+    [success addAction:okAction];
+    
+    [self presentViewController:success animated:YES completion:nil];
+    
 }
 
 - (IBAction)loginUser:(id)sender {

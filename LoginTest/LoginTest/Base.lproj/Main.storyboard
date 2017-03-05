@@ -29,7 +29,7 @@
                                         <rect key="frame" x="67" y="135" width="241" height="30"/>
                                         <color key="textColor" red="0.6915252221" green="0.6915252221" blue="0.6915252221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                         <connections>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="TIk-p0-AzK"/>
                                         </connections>
@@ -38,7 +38,7 @@
                                         <rect key="frame" x="67" y="80" width="241" height="30"/>
                                         <color key="textColor" red="0.6915252221" green="0.6915252221" blue="0.6915252221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                         <connections>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="q4k-rZ-lEc"/>
                                         </connections>
@@ -108,6 +108,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="116" y="123.68815592203899"/>
+        </scene>
+        <!--SiS Login-->
+        <scene sceneID="Zfc-Mv-6LK">
+            <objects>
+                <viewController storyboardIdentifier="SiSLogin" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ITe-X3-npI" customClass="SiSLogin" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DMB-rC-jrT"/>
+                        <viewControllerLayoutGuide type="bottom" id="NGv-Df-TMz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4kk-Jv-m5K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have logged successfully!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0y-VU-9s2">
+                                <rect key="frame" x="72" y="74" width="231" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="r0y-VU-9s2" firstAttribute="top" secondItem="DMB-rC-jrT" secondAttribute="bottom" constant="54" id="IEK-TJ-hH5"/>
+                            <constraint firstItem="r0y-VU-9s2" firstAttribute="centerX" secondItem="4kk-Jv-m5K" secondAttribute="centerX" id="Wcb-eT-U96"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="utL-m9-JSm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="866" y="124"/>
         </scene>
     </scenes>
 </document>
