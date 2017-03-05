@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57B642AF1E6C2BE900B2C613 /* SiSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B642AE1E6C2BE900B2C613 /* SiSLoginViewController.m */; };
 		57BE53AE1E6C281600A7815C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57BE53AD1E6C281600A7815C /* main.m */; };
 		57BE53B11E6C281600A7815C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57BE53B01E6C281600A7815C /* AppDelegate.m */; };
-		57BE53B41E6C281600A7815C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57BE53B31E6C281600A7815C /* ViewController.m */; };
 		57BE53B71E6C281600A7815C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57BE53B51E6C281600A7815C /* Main.storyboard */; };
 		57BE53B91E6C281600A7815C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57BE53B81E6C281600A7815C /* Assets.xcassets */; };
 		57BE53BC1E6C281600A7815C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57BE53BA1E6C281600A7815C /* LaunchScreen.storyboard */; };
@@ -35,12 +35,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57B642AD1E6C2BE900B2C613 /* SiSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSLoginViewController.h; sourceTree = "<group>"; };
+		57B642AE1E6C2BE900B2C613 /* SiSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSLoginViewController.m; sourceTree = "<group>"; };
 		57BE53A91E6C281600A7815C /* LoginTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57BE53AD1E6C281600A7815C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		57BE53AF1E6C281600A7815C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		57BE53B01E6C281600A7815C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		57BE53B21E6C281600A7815C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		57BE53B31E6C281600A7815C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		57BE53B61E6C281600A7815C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		57BE53B81E6C281600A7815C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57BE53BB1E6C281600A7815C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,8 +103,8 @@
 			children = (
 				57BE53AF1E6C281600A7815C /* AppDelegate.h */,
 				57BE53B01E6C281600A7815C /* AppDelegate.m */,
-				57BE53B21E6C281600A7815C /* ViewController.h */,
-				57BE53B31E6C281600A7815C /* ViewController.m */,
+				57B642AD1E6C2BE900B2C613 /* SiSLoginViewController.h */,
+				57B642AE1E6C2BE900B2C613 /* SiSLoginViewController.m */,
 				57BE53B51E6C281600A7815C /* Main.storyboard */,
 				57BE53B81E6C281600A7815C /* Assets.xcassets */,
 				57BE53BA1E6C281600A7815C /* LaunchScreen.storyboard */,
@@ -277,8 +277,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57BE53B41E6C281600A7815C /* ViewController.m in Sources */,
 				57BE53B11E6C281600A7815C /* AppDelegate.m in Sources */,
+				57B642AF1E6C2BE900B2C613 /* SiSLoginViewController.m in Sources */,
 				57BE53AE1E6C281600A7815C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -519,6 +519,7 @@
 				57BE53D81E6C281600A7815C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		57BE53D91E6C281600A7815C /* Build configuration list for PBXNativeTarget "LoginTestTests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +528,7 @@
 				57BE53DB1E6C281600A7815C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		57BE53DC1E6C281600A7815C /* Build configuration list for PBXNativeTarget "LoginTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +537,7 @@
 				57BE53DE1E6C281600A7815C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
