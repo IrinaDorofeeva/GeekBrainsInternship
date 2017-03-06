@@ -109,27 +109,10 @@
             </objects>
             <point key="canvasLocation" x="116" y="123.68815592203899"/>
         </scene>
-        <!--SiS Login-->
-        <scene sceneID="Zfc-Mv-6LK">
-            <objects>
-                <viewController storyboardIdentifier="SiSLogin" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ITe-X3-npI" customClass="SiSLogin" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="DMB-rC-jrT"/>
-                        <viewControllerLayoutGuide type="bottom" id="NGv-Df-TMz"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4kk-Jv-m5K">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="utL-m9-JSm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="866" y="124"/>
-        </scene>
-        <!--View Controller-->
+        <!--SiS Login Successfully-->
         <scene sceneID="rbu-96-mgk">
             <objects>
-                <viewController storyboardIdentifier="loginSuccessfully" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2BJ-p5-bZb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SiSLoginSuccessfully" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2BJ-p5-bZb" customClass="SiSLoginSuccessfully" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2hn-pc-7On"/>
                         <viewControllerLayoutGuide type="bottom" id="Vkk-d1-JYx"/>
@@ -144,16 +127,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPM-OA-us6">
+                                <rect key="frame" x="156" y="137" width="63" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutAction:" destination="2BJ-p5-bZb" eventType="touchUpInside" id="MfO-aH-xVF"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="hPM-OA-us6" firstAttribute="top" secondItem="r0y-VU-9s2" secondAttribute="bottom" constant="35" id="dvH-33-hGH"/>
                             <constraint firstItem="r0y-VU-9s2" firstAttribute="top" secondItem="2hn-pc-7On" secondAttribute="bottom" constant="61" id="vMM-NB-FaK"/>
                             <constraint firstItem="r0y-VU-9s2" firstAttribute="centerX" secondItem="Uwj-Kb-ai5" secondAttribute="centerX" id="wQz-Kh-FqQ"/>
+                            <constraint firstItem="hPM-OA-us6" firstAttribute="centerX" secondItem="Uwj-Kb-ai5" secondAttribute="centerX" id="wVJ-Vs-VTe"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Q9-VA-ETW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1593" y="124"/>
+            <point key="canvasLocation" x="804" y="124"/>
         </scene>
     </scenes>
 </document>

@@ -7,8 +7,7 @@
 //
 
 #import "SiSLoginViewController.h"
-#import "SiSLogin.h"
-
+#import "SiSLoginSuccessfully.h"
 
 @interface SiSLoginViewController () 
 
@@ -99,7 +98,7 @@
     
     [defaults setObject:self.usernameFld.text forKey:@"username"];
     [defaults setObject:self.passwordFld.text forKey:@"password"];
-    //[defaults setBool:YES forKey:@"registered"];
+    [defaults setBool:YES forKey:@"registered"];
     
     [defaults synchronize];
     
@@ -108,11 +107,7 @@
                                                        style:UIAlertActionStyleDefault
                                                      handler:^(UIAlertAction * _Nonnull action) {
                                                          
-                                                         //[self dismissViewControllerAnimated:YES completion:nil];
-                                                         
-                                                         UIStoryboard* sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-                                                         UIViewController* vc = [sb instantiateViewControllerWithIdentifier:@"loginSuccessfully"];
-                                                         [self presentViewController:vc animated:YES completion:nil];
+                                                         [self openSuccessLoginView];
                                                          
                                                          
                                                      }];
@@ -125,7 +120,31 @@
 
 - (IBAction)loginUser:(id)sender {
     
+    NSUserDefaults* df = [NSUserDefaults standardUserDefaults];
     
+    if ([self.usernameFld.text isEqualToString:[df objectForKey:@"username"]] && [self.passwordFld.text isEqualToString:[df objectForKey:@"password"]]) {
+        NSLog(@"login credentials accepted");
+        [self openSuccessLoginView];
+        
+        self.usernameFld.text = nil;
+        self.passwordFld.text = nil;
+        
+    } else {
+        
+        NSLog(@"login credentials incorrect");
+        UIAlertController* error = [UIAlertController alertControllerWithTitle:@"Oooops" message:@"Your username and password does not match" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction* okAction = [UIAlertAction actionWithTitle:@"ОК"
+                                                           style:UIAlertActionStyleDefault
+                                                         handler:^(UIAlertAction * _Nonnull action) {
+                                                             
+                                                             [self dismissViewControllerAnimated:YES completion:nil];
+                                                             
+                                                         }];
+        
+        
+        [error addAction:okAction];
+        [self presentViewController:error animated:YES completion:nil];
+    }
 }
 
 #pragma mark - UITextFieldDelegate
@@ -143,8 +162,11 @@
     return YES;
 }
 
--(void)textFieldDidBeginEditing:(UITextField *)textField {
+- (void) openSuccessLoginView {
     
+    UIStoryboard* sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    SiSLoginSuccessfully* vc = [sb instantiateViewControllerWithIdentifier:@"SiSLoginSuccessfully"];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 
