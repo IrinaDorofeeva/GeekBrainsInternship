@@ -18,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //Check user defaults for registered users
+    
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
     
     if (![defaults boolForKey:@"registered"]) {
@@ -40,8 +42,10 @@
 
 #pragma mark - Actions
 
+//Register user
 - (IBAction)registerUser:(id)sender {
     
+    //Check for full fields and show alert
     if ([self.usernameFld.text isEqualToString:@""] || [self.passwordFld.text isEqualToString:@""]) {
         
         UIAlertController* error = [UIAlertController alertControllerWithTitle:@"Oooops" message:@"You must complete all fields" preferredStyle:UIAlertControllerStyleAlert];
@@ -60,6 +64,7 @@
         
     } else {
         
+        //Check password and re-Enter password fields
         [self checkPasswordsMatch];
     }
 }
