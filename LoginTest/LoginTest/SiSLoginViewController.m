@@ -111,7 +111,7 @@
                                                          //[self dismissViewControllerAnimated:YES completion:nil];
                                                          
                                                          UIStoryboard* sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-                                                         SiSLogin* vc = [sb instantiateViewControllerWithIdentifier:@"SiSLogin"];
+                                                         UIViewController* vc = [sb instantiateViewControllerWithIdentifier:@"loginSuccessfully"];
                                                          [self presentViewController:vc animated:YES completion:nil];
                                                          
                                                          
