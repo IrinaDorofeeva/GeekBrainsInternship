@@ -32,8 +32,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _usernameFld.delegate = self;
+    _passwordFld.delegate = self;
     
-       //Check user defaults for registered users
+    
+  //Check user defaults for registered users
     
   /*  NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
     
@@ -44,7 +47,7 @@
     } else {
         
         NSLog(@"New user is registered");
-//        self.reEnterPasswordFld.hidden = YES;
+ //        self.reEnterPasswordFld.hidden = YES;
         self.registerBtn.hidden = YES;
     }*/
 
@@ -181,9 +184,13 @@
     return YES;
 }
 */
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
     [textField resignFirstResponder];
-    return NO;
+    
+    return YES;
 }
 
 
@@ -197,6 +204,8 @@
 
 
 #pragma mark - keyboard movements
+
+
 - (void)keyboardWillShow:(NSNotification *)notification
 {
     CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
