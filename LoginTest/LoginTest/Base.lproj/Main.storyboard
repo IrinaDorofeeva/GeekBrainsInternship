@@ -79,6 +79,9 @@
                                         <state key="normal" title="Register">
                                             <color key="titleColor" red="0.21960784310000001" green="0.5568627451" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="NOY-Na-slc" kind="show" id="oyw-Tg-wIy"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -97,24 +100,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1060" y="123.68815592203899"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="4rg-5y-tIG">
-            <objects>
-                <viewController id="1VB-IZ-QGH" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="OWC-Qz-WMg"/>
-                        <viewControllerLayoutGuide type="bottom" id="XDd-Uq-CC4"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9Rb-pV-CdS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qRg-7F-QIk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1060" y="806"/>
         </scene>
         <!--SiS Login Successfully-->
         <scene sceneID="rbu-96-mgk">
@@ -175,6 +160,77 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5hp-ra-bEH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="120.8" y="123.68815592203899"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="AUx-vd-laY">
+            <objects>
+                <viewController id="NOY-Na-slc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e0k-Sy-8am"/>
+                        <viewControllerLayoutGuide type="bottom" id="aRD-GX-493"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UsY-tg-7ea">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="center" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8uu-cj-xb7">
+                                <rect key="frame" x="36" y="232" width="303" height="202"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register Yourself" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhU-qH-KBv">
+                                        <rect key="frame" x="0.0" y="0.0" width="303" height="22"/>
+                                        <fontDescription key="fontDescription" name="Magistral" family="Magistral" pointSize="20"/>
+                                        <color key="textColor" red="0.21960784310000001" green="0.5568627451" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0zV-5x-rEp">
+                                        <rect key="frame" x="0.0" y="52" width="303" height="150"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Login" borderStyle="roundedRect" placeholder="username" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NdZ-il-2Bb">
+                                                <rect key="frame" x="0.0" y="0.0" width="303" height="30"/>
+                                                <color key="textColor" red="0.6915252221" green="0.6915252221" blue="0.6915252221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" placeholder="password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dxg-Mp-4kU">
+                                                <rect key="frame" x="0.0" y="40" width="303" height="30"/>
+                                                <color key="textColor" red="0.6915252221" green="0.6915252221" blue="0.6915252221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Re-enter password" borderStyle="roundedRect" placeholder="password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="37W-Ec-7yJ">
+                                                <rect key="frame" x="0.0" y="80" width="303" height="30"/>
+                                                <color key="textColor" red="0.6915252221" green="0.6915252221" blue="0.6915252221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UW9-Yq-C29">
+                                                <rect key="frame" x="0.0" y="120" width="303" height="30"/>
+                                                <color key="backgroundColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                <state key="normal" title="OK"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8uu-cj-xb7" firstAttribute="centerX" secondItem="UsY-tg-7ea" secondAttribute="centerX" id="3kT-eD-h6L"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8uu-cj-xb7" secondAttribute="trailing" constant="20" id="OaZ-h5-7SX"/>
+                            <constraint firstItem="8uu-cj-xb7" firstAttribute="centerY" secondItem="UsY-tg-7ea" secondAttribute="centerY" id="bUa-99-eyA"/>
+                            <constraint firstItem="8uu-cj-xb7" firstAttribute="leading" secondItem="UsY-tg-7ea" secondAttribute="leadingMargin" constant="20" id="oQe-FR-8Y7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pSi-v0-XW8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060" y="811"/>
         </scene>
     </scenes>
     <resources>
