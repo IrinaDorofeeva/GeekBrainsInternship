@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042F51FB1E70FF8000D021C3 /* 1488569581_analytics.png in Resources */ = {isa = PBXBuildFile; fileRef = 042F51FA1E70FF8000D021C3 /* 1488569581_analytics.png */; };
+		042F51FC1E71002900D021C3 /* Magistral.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 042F51F91E70FF7A00D021C3 /* Magistral.TTF */; };
 		523FFEE51E6DCAB300173BA5 /* SiSLoginSuccessfully.m in Sources */ = {isa = PBXBuildFile; fileRef = 523FFEE41E6DCAB300173BA5 /* SiSLoginSuccessfully.m */; };
 		57B642AF1E6C2BE900B2C613 /* SiSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B642AE1E6C2BE900B2C613 /* SiSLoginViewController.m */; };
 		57BE53AE1E6C281600A7815C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57BE53AD1E6C281600A7815C /* main.m */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042F51F91E70FF7A00D021C3 /* Magistral.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = Magistral.TTF; path = ../../../Desktop/Internship/Magistral.TTF; sourceTree = "<group>"; };
+		042F51FA1E70FF8000D021C3 /* 1488569581_analytics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1488569581_analytics.png; path = "/Users/Mac/Desktop/Internship/LoginTest-master/LoginTest/../../1488569581_analytics.png"; sourceTree = "<absolute>"; };
 		523FFEE31E6DCAB300173BA5 /* SiSLoginSuccessfully.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSLoginSuccessfully.h; sourceTree = "<group>"; };
 		523FFEE41E6DCAB300173BA5 /* SiSLoginSuccessfully.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSLoginSuccessfully.m; sourceTree = "<group>"; };
 		57B642AD1E6C2BE900B2C613 /* SiSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSLoginViewController.h; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 				57BE53C51E6C281600A7815C /* LoginTestTests */,
 				57BE53D01E6C281600A7815C /* LoginTestUITests */,
 				57BE53AA1E6C281600A7815C /* Products */,
+				042F51F91E70FF7A00D021C3 /* Magistral.TTF */,
+				042F51FA1E70FF8000D021C3 /* 1488569581_analytics.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -255,7 +261,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042F51FC1E71002900D021C3 /* Magistral.TTF in Resources */,
 				57BE53BC1E6C281600A7815C /* LaunchScreen.storyboard in Resources */,
+				042F51FB1E70FF8000D021C3 /* 1488569581_analytics.png in Resources */,
 				57BE53B91E6C281600A7815C /* Assets.xcassets in Resources */,
 				57BE53B71E6C281600A7815C /* Main.storyboard in Resources */,
 			);

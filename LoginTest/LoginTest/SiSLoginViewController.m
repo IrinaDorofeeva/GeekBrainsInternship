@@ -5,6 +5,7 @@
 //  Created by Stanly Shiyanovskiy on 05.03.17.
 //  Copyright © 2017 Stanly Shiyanovskiy. All rights reserved.
 //
+//this version is on github
 
 #import "SiSLoginViewController.h"
 #import "SiSLoginSuccessfully.h"
@@ -28,7 +29,7 @@
 
     } else {
         
-        NSLog(@"user is registered");
+        NSLog(@"New user is registered");
         self.reEnterPasswordFld.hidden = YES;
         self.registerBtn.hidden = YES;
     }
