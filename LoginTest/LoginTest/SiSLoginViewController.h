@@ -10,14 +10,21 @@
 
 @interface SiSLoginViewController : UIViewController <UITextFieldDelegate>
 
-@property (weak, nonatomic) IBOutlet UIView *txtView;
+
+
 
 
 @property (weak, nonatomic) IBOutlet UIButton *registerBtn;
+
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
+
 @property (weak, nonatomic) IBOutlet UITextField *usernameFld;
+
+
 @property (weak, nonatomic) IBOutlet UITextField *passwordFld;
-@property (weak, nonatomic) IBOutlet UITextField *reEnterPasswordFld;
+
+
+@property (weak, nonatomic) IBOutlet UIView *enterLoginView;
 
 - (IBAction)registerUser:(id)sender;
 - (IBAction)loginUser:(id)sender;

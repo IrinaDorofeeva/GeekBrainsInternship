@@ -5,7 +5,7 @@
 //  Created by Stanly Shiyanovskiy on 05.03.17.
 //  Copyright © 2017 Stanly Shiyanovskiy. All rights reserved.
 //
-//this version is on github
+//******************this code version is on github********************
 
 #import "SiSLoginViewController.h"
 #import "SiSLoginSuccessfully.h"
@@ -16,12 +16,26 @@
 
 @implementation SiSLoginViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //Check user defaults for registered users
     
-    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+       //Check user defaults for registered users
+    
+  /*  NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
     
     if (![defaults boolForKey:@"registered"]) {
         NSLog(@"No user registered");
@@ -30,9 +44,9 @@
     } else {
         
         NSLog(@"New user is registered");
-        self.reEnterPasswordFld.hidden = YES;
+//        self.reEnterPasswordFld.hidden = YES;
         self.registerBtn.hidden = YES;
-    }
+    }*/
 
 }
 
@@ -47,7 +61,7 @@
 - (IBAction)registerUser:(id)sender {
     
     //Check for full fields and show alert
-    if ([self.usernameFld.text isEqualToString:@""] || [self.passwordFld.text isEqualToString:@""]) {
+   /* if ([self.usernameFld.text isEqualToString:@""] || [self.passwordFld.text isEqualToString:@""]) {
         
         UIAlertController* error = [UIAlertController alertControllerWithTitle:@"Oooops" message:@"You must complete all fields" preferredStyle:UIAlertControllerStyleAlert];
         
@@ -67,12 +81,12 @@
         
         //Check password and re-Enter password fields
         [self checkPasswordsMatch];
-    }
+    }*/
 }
 
 - (void) checkPasswordsMatch {
     
-    if ([self.passwordFld.text isEqualToString:self.reEnterPasswordFld.text]) {
+  /*  if ([self.passwordFld.text isEqualToString:self.reEnterPasswordFld.text]) {
         NSLog(@"passwords match!");
         [self registerNewUser];
         
@@ -95,12 +109,12 @@
         
         [self presentViewController:error animated:YES completion:nil];
     
-    }
+    }*/
 }
 
 - (void) registerNewUser {
     
-    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+   /* NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
     
     [defaults setObject:self.usernameFld.text forKey:@"username"];
     [defaults setObject:self.passwordFld.text forKey:@"password"];
@@ -121,6 +135,7 @@
     [success addAction:okAction];
     
     [self presentViewController:success animated:YES completion:nil];
+    */
     
 }
 
@@ -155,18 +170,23 @@
 
 #pragma mark - UITextFieldDelegate
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+/*- (BOOL)textFieldShouldReturn:(UITextField *)textField {
 
     if ([textField isEqual:self.usernameFld]) {
         [self.passwordFld becomeFirstResponder];
-    } else if ([textField isEqual:self.passwordFld] && !self.registerBtn.hidden) {
-        [self.reEnterPasswordFld becomeFirstResponder];
-    } else {
+    } else if ([textField isEqual:self.passwordFld] && !self.loginBtn.hidden) {
         [textField resignFirstResponder];
     }
     
     return YES;
 }
+*/
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
+}
+
+
 
 - (void) openSuccessLoginView {
     
@@ -176,6 +196,31 @@
 }
 
 
+#pragma mark - keyboard movements
+- (void)keyboardWillShow:(NSNotification *)notification
+{
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        CGRect f = self.view.frame;
+        f.origin.y = -keyboardSize.height;
+        self.view.frame = f;
+    }];
+}
+
+-(void)keyboardWillHide:(NSNotification *)notification
+{
+    [UIView animateWithDuration:0.3 animations:^{
+        CGRect f = self.view.frame;
+        f.origin.y = 0.0f;
+        self.view.frame = f;
+    }];
+}
+
+
+//- (IBAction)dismissKeyboard:(id)sender {
+//    [self.passwordFld resignFirstResponder];
+//}
 
 
 
