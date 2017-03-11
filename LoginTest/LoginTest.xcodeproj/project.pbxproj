@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0421F5681E73877500B2E4AC /* SiSRegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0421F5671E73877500B2E4AC /* SiSRegistrationViewController.m */; };
+		0421F56B1E738B7900B2E4AC /* SiSStatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0421F56A1E738B7900B2E4AC /* SiSStatisticsViewController.m */; };
+		0421F56D1E73AEA800B2E4AC /* dailybt.png in Resources */ = {isa = PBXBuildFile; fileRef = 0421F56C1E73AEA800B2E4AC /* dailybt.png */; };
+		0421F56F1E73AEAE00B2E4AC /* generalbt.png in Resources */ = {isa = PBXBuildFile; fileRef = 0421F56E1E73AEAE00B2E4AC /* generalbt.png */; };
 		042F51FB1E70FF8000D021C3 /* 1488569581_analytics.png in Resources */ = {isa = PBXBuildFile; fileRef = 042F51FA1E70FF8000D021C3 /* 1488569581_analytics.png */; };
 		042F51FC1E71002900D021C3 /* Magistral.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 042F51F91E70FF7A00D021C3 /* Magistral.TTF */; };
-		523FFEE51E6DCAB300173BA5 /* SiSLoginSuccessfully.m in Sources */ = {isa = PBXBuildFile; fileRef = 523FFEE41E6DCAB300173BA5 /* SiSLoginSuccessfully.m */; };
 		57B642AF1E6C2BE900B2C613 /* SiSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B642AE1E6C2BE900B2C613 /* SiSLoginViewController.m */; };
 		57BE53AE1E6C281600A7815C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57BE53AD1E6C281600A7815C /* main.m */; };
 		57BE53B11E6C281600A7815C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57BE53B01E6C281600A7815C /* AppDelegate.m */; };
@@ -38,10 +41,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0421F5661E73877500B2E4AC /* SiSRegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SiSRegistrationViewController.h; path = ../SiSRegistrationViewController.h; sourceTree = "<group>"; };
+		0421F5671E73877500B2E4AC /* SiSRegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SiSRegistrationViewController.m; path = ../SiSRegistrationViewController.m; sourceTree = "<group>"; };
+		0421F5691E738B7900B2E4AC /* SiSStatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSStatisticsViewController.h; sourceTree = "<group>"; };
+		0421F56A1E738B7900B2E4AC /* SiSStatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSStatisticsViewController.m; sourceTree = "<group>"; };
+		0421F56C1E73AEA800B2E4AC /* dailybt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dailybt.png; path = ../../../../Desktop/dailybt.png; sourceTree = "<group>"; };
+		0421F56E1E73AEAE00B2E4AC /* generalbt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = generalbt.png; path = ../../../../Desktop/generalbt.png; sourceTree = "<group>"; };
 		042F51F91E70FF7A00D021C3 /* Magistral.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = Magistral.TTF; path = ../../../Desktop/Internship/Magistral.TTF; sourceTree = "<group>"; };
 		042F51FA1E70FF8000D021C3 /* 1488569581_analytics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1488569581_analytics.png; path = "/Users/Mac/Desktop/Internship/LoginTest-master/LoginTest/../../1488569581_analytics.png"; sourceTree = "<absolute>"; };
-		523FFEE31E6DCAB300173BA5 /* SiSLoginSuccessfully.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSLoginSuccessfully.h; sourceTree = "<group>"; };
-		523FFEE41E6DCAB300173BA5 /* SiSLoginSuccessfully.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSLoginSuccessfully.m; sourceTree = "<group>"; };
 		57B642AD1E6C2BE900B2C613 /* SiSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSLoginViewController.h; sourceTree = "<group>"; };
 		57B642AE1E6C2BE900B2C613 /* SiSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSLoginViewController.m; sourceTree = "<group>"; };
 		57BE53A91E6C281600A7815C /* LoginTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,11 +119,14 @@
 			children = (
 				57BE53AF1E6C281600A7815C /* AppDelegate.h */,
 				57BE53B01E6C281600A7815C /* AppDelegate.m */,
+				0421F5661E73877500B2E4AC /* SiSRegistrationViewController.h */,
+				0421F5671E73877500B2E4AC /* SiSRegistrationViewController.m */,
 				57B642AD1E6C2BE900B2C613 /* SiSLoginViewController.h */,
 				57B642AE1E6C2BE900B2C613 /* SiSLoginViewController.m */,
-				523FFEE31E6DCAB300173BA5 /* SiSLoginSuccessfully.h */,
-				523FFEE41E6DCAB300173BA5 /* SiSLoginSuccessfully.m */,
+				0421F5691E738B7900B2E4AC /* SiSStatisticsViewController.h */,
+				0421F56A1E738B7900B2E4AC /* SiSStatisticsViewController.m */,
 				57BE53B51E6C281600A7815C /* Main.storyboard */,
+				0421F56E1E73AEAE00B2E4AC /* generalbt.png */,
 				57BE53B81E6C281600A7815C /* Assets.xcassets */,
 				57BE53BA1E6C281600A7815C /* LaunchScreen.storyboard */,
 				57BE53BD1E6C281600A7815C /* Info.plist */,
@@ -129,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				57BE53AD1E6C281600A7815C /* main.m */,
+				0421F56C1E73AEA800B2E4AC /* dailybt.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -264,7 +275,9 @@
 				042F51FC1E71002900D021C3 /* Magistral.TTF in Resources */,
 				57BE53BC1E6C281600A7815C /* LaunchScreen.storyboard in Resources */,
 				042F51FB1E70FF8000D021C3 /* 1488569581_analytics.png in Resources */,
+				0421F56D1E73AEA800B2E4AC /* dailybt.png in Resources */,
 				57BE53B91E6C281600A7815C /* Assets.xcassets in Resources */,
+				0421F56F1E73AEAE00B2E4AC /* generalbt.png in Resources */,
 				57BE53B71E6C281600A7815C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,9 +304,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				57BE53B11E6C281600A7815C /* AppDelegate.m in Sources */,
+				0421F56B1E738B7900B2E4AC /* SiSStatisticsViewController.m in Sources */,
 				57B642AF1E6C2BE900B2C613 /* SiSLoginViewController.m in Sources */,
-				523FFEE51E6DCAB300173BA5 /* SiSLoginSuccessfully.m in Sources */,
 				57BE53AE1E6C281600A7815C /* main.m in Sources */,
+				0421F5681E73877500B2E4AC /* SiSRegistrationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

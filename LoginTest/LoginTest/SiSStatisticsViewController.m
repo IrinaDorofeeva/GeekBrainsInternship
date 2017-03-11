@@ -34,4 +34,6 @@
 }
 */
 
+- (IBAction)logoutAction:(id)sender {
+}
 @end

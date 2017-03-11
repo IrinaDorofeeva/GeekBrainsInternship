@@ -24,10 +24,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordFld;
 
 
-@property (weak, nonatomic) IBOutlet UIView *enterLoginView;
-
-- (IBAction)registerUser:(id)sender;
 - (IBAction)loginUser:(id)sender;
+
+- (void) openStatisticsView;
 
 
 

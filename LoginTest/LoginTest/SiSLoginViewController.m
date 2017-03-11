@@ -8,7 +8,8 @@
 //******************this code version is on github********************
 
 #import "SiSLoginViewController.h"
-#import "SiSLoginSuccessfully.h"
+#import "SiSStatisticsViewController.h"
+#
 
 @interface SiSLoginViewController () 
 
@@ -31,6 +32,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //this is for textfield delegete to work (solving problem with keyboard blocking textfields)
     
     _usernameFld.delegate = self;
     _passwordFld.delegate = self;
@@ -60,96 +62,20 @@
 
 #pragma mark - Actions
 
-//Register user
-- (IBAction)registerUser:(id)sender {
-    
-    //Check for full fields and show alert
-   /* if ([self.usernameFld.text isEqualToString:@""] || [self.passwordFld.text isEqualToString:@""]) {
-        
-        UIAlertController* error = [UIAlertController alertControllerWithTitle:@"Oooops" message:@"You must complete all fields" preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction* okAction = [UIAlertAction actionWithTitle:@"ОК"
-                                                             style:UIAlertActionStyleDefault
-                                                           handler:^(UIAlertAction * _Nonnull action) {
-                                                               
-                                                               [self dismissViewControllerAnimated:YES completion:nil];
-                                                               
-                                                           }];
-        
-        [error addAction:okAction];
-        
-        [self presentViewController:error animated:YES completion:nil];
-        
-    } else {
-        
-        //Check password and re-Enter password fields
-        [self checkPasswordsMatch];
-    }*/
-}
-
-- (void) checkPasswordsMatch {
-    
-  /*  if ([self.passwordFld.text isEqualToString:self.reEnterPasswordFld.text]) {
-        NSLog(@"passwords match!");
-        [self registerNewUser];
-        
-    } else {
-        
-        NSLog(@"passwords don't match");
-        UIAlertController* error = [UIAlertController alertControllerWithTitle:@"Oooops" message:@"Your entered passwords do not match" preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction* okAction = [UIAlertAction actionWithTitle:@"ОК"
-                                                           style:UIAlertActionStyleDefault
-                                                         handler:^(UIAlertAction * _Nonnull action) {
-                                                             
-                                                             [self dismissViewControllerAnimated:YES completion:nil];
-                                                             
-                                                         }];
-        
-        
-        [error addAction:okAction];
-        
-        
-        
-        [self presentViewController:error animated:YES completion:nil];
-    
-    }*/
-}
-
-- (void) registerNewUser {
-    
-   /* NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-    
-    [defaults setObject:self.usernameFld.text forKey:@"username"];
-    [defaults setObject:self.passwordFld.text forKey:@"password"];
-    [defaults setBool:YES forKey:@"registered"];
-    
-    [defaults synchronize];
-    
-    UIAlertController* success = [UIAlertController alertControllerWithTitle:@"Success" message:@"You have registered a new user" preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction* okAction = [UIAlertAction actionWithTitle:@"ОК"
-                                                       style:UIAlertActionStyleDefault
-                                                     handler:^(UIAlertAction * _Nonnull action) {
-                                                         
-                                                         [self openSuccessLoginView];
-                                                         
-                                                         
-                                                     }];
-    
-    [success addAction:okAction];
-    
-    [self presentViewController:success animated:YES completion:nil];
-    */
-    
-}
 
 - (IBAction)loginUser:(id)sender {
     
     NSUserDefaults* df = [NSUserDefaults standardUserDefaults];
     
-    if ([self.usernameFld.text isEqualToString:[df objectForKey:@"username"]] && [self.passwordFld.text isEqualToString:[df objectForKey:@"password"]]) {
-        NSLog(@"login credentials accepted");
-        [self openSuccessLoginView];
+    if (
         
+        
+        [self.usernameFld.text isEqualToString:[df objectForKey:@"username"]] && [self.passwordFld.text isEqualToString:[df objectForKey:@"password"]])
+            {
+        NSLog(@"login credentials accepted");
+        [self openStatisticsView];
+        
+             
         self.usernameFld.text = nil;
         self.passwordFld.text = nil;
         
@@ -173,18 +99,6 @@
 
 #pragma mark - UITextFieldDelegate
 
-/*- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-
-    if ([textField isEqual:self.usernameFld]) {
-        [self.passwordFld becomeFirstResponder];
-    } else if ([textField isEqual:self.passwordFld] && !self.loginBtn.hidden) {
-        [textField resignFirstResponder];
-    }
-    
-    return YES;
-}
-*/
-
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
@@ -194,13 +108,16 @@
 }
 
 
-
-- (void) openSuccessLoginView {
+- (void) openStatisticsView {
     
     UIStoryboard* sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    SiSLoginSuccessfully* vc = [sb instantiateViewControllerWithIdentifier:@"SiSLoginSuccessfully"];
+    SiSStatisticsViewController* vc = [sb instantiateViewControllerWithIdentifier:@"SiSStatisticsNavigationController"];
     [self presentViewController:vc animated:YES completion:nil];
+    
+    
 }
+
+
 
 
 #pragma mark - keyboard movements
@@ -226,10 +143,6 @@
     }];
 }
 
-
-//- (IBAction)dismissKeyboard:(id)sender {
-//    [self.passwordFld resignFirstResponder];
-//}
 
 
 

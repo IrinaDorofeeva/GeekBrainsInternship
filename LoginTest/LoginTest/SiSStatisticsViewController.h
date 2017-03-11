@@ -10,4 +10,7 @@
 
 @interface SiSStatisticsViewController : UIViewController
 
+
+- (IBAction)logoutAction:(id)sender;
+
 @end
