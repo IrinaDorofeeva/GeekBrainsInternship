@@ -97,15 +97,6 @@
     }
 }
 
-#pragma mark - UITextFieldDelegate
-
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    [textField resignFirstResponder];
-    
-    return YES;
-}
 
 
 - (void) openStatisticsView {
@@ -119,6 +110,15 @@
 
 
 
+#pragma mark - UITextFieldDelegate
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    
+    return YES;
+}
 
 #pragma mark - keyboard movements
 
