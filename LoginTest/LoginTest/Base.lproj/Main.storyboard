@@ -28,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="ei5-BD-bde">
-                                <rect key="frame" x="26" y="84" width="323" height="524"/>
+                                <rect key="frame" x="26" y="84" width="323" height="573"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="E2r-Nn-fqs">
                                         <rect key="frame" x="0.0" y="0.0" width="323" height="345"/>
@@ -36,10 +36,10 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="PEH-CX-iUg">
                                                 <rect key="frame" x="90" y="0.0" width="143" height="185"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="1488569581_analytics.png" translatesAutoresizingMaskIntoConstraints="NO" id="t11-xD-b12">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1488569581_analytics.png" translatesAutoresizingMaskIntoConstraints="NO" id="t11-xD-b12">
                                                         <rect key="frame" x="0.0" y="0.0" width="143" height="128"/>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Statistics App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pz8-Qm-Tzu">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Statistics App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pz8-Qm-Tzu">
                                                         <rect key="frame" x="0.0" y="158" width="143" height="27"/>
                                                         <fontDescription key="fontDescription" name="Magistral" family="Magistral" pointSize="25"/>
                                                         <color key="textColor" red="0.21960784310000001" green="0.5568627451" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -81,7 +81,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHf-W5-dFg">
-                                        <rect key="frame" x="129.5" y="435" width="64" height="89"/>
+                                        <rect key="frame" x="129.5" y="435" width="64" height="138"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Register">
@@ -117,16 +117,16 @@
             </objects>
             <point key="canvasLocation" x="1060" y="123.68815592203899"/>
         </scene>
-        <!--Daily-->
+        <!--Daily Statistics-->
         <scene sceneID="rbu-96-mgk">
             <objects>
-                <viewController storyboardIdentifier="SiSStatistics" title="Daily" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2BJ-p5-bZb" customClass="SiSStatisticsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SiSStatistics" title="Daily Statistics" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2BJ-p5-bZb" customClass="SiSStatisticsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2hn-pc-7On"/>
                         <viewControllerLayoutGuide type="bottom" id="Vkk-d1-JYx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Uwj-Kb-ai5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have logged successfully!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0y-VU-9s2">
@@ -146,40 +146,52 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="M35-Y5-fSL"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Zi0-Oq-q5h">
+                                <rect key="frame" x="16" y="548" width="343" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="r0y-VU-9s2" firstAttribute="top" secondItem="2hn-pc-7On" secondAttribute="bottom" constant="61" id="Qvf-5n-tt9"/>
                             <constraint firstItem="hPM-OA-us6" firstAttribute="top" secondItem="r0y-VU-9s2" secondAttribute="bottom" constant="35" id="dvH-33-hGH"/>
-                            <constraint firstItem="r0y-VU-9s2" firstAttribute="top" secondItem="2hn-pc-7On" secondAttribute="bottom" constant="61" id="vMM-NB-FaK"/>
                             <constraint firstItem="r0y-VU-9s2" firstAttribute="centerX" secondItem="Uwj-Kb-ai5" secondAttribute="centerX" id="wQz-Kh-FqQ"/>
                             <constraint firstItem="hPM-OA-us6" firstAttribute="centerX" secondItem="Uwj-Kb-ai5" secondAttribute="centerX" id="wVJ-Vs-VTe"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="PqW-PW-dxG"/>
+                    <tabBarItem key="tabBarItem" title="Daily" id="PqW-PW-dxG">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-13"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="6Wq-9Q-Zi2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Q9-VA-ETW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3414" y="-251"/>
+            <point key="canvasLocation" x="3413.5999999999999" y="-251.42428785607197"/>
         </scene>
-        <!--Item-->
+        <!--General Statistics-->
         <scene sceneID="9Uc-Zr-hmp">
             <objects>
-                <viewController id="mxR-fW-VnF" sceneMemberID="viewController">
+                <viewController title="General Statistics" id="mxR-fW-VnF" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="lU2-20-P35"/>
-                        <viewControllerLayoutGuide type="bottom" id="ejh-QW-sVo"/>
+                        <viewControllerLayoutGuide type="top" id="hUE-ML-Zdh"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qar-U2-yy1"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Fpd-VU-0IZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <view key="view" contentMode="scaleToFill" id="Qs6-mI-F7Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="O4I-F4-aSH"/>
+                    <tabBarItem key="tabBarItem" title="General" id="O4I-F4-aSH">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-13"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JkW-H6-MEU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3414" y="412"/>
+            <point key="canvasLocation" x="3570" y="463"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jFd-oq-9dh">
@@ -213,7 +225,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="center" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8uu-cj-xb7">
-                                <rect key="frame" x="36" y="233" width="303" height="202"/>
+                                <rect key="frame" x="36" y="232.5" width="303" height="202"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register Yourself" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhU-qH-KBv">
                                         <rect key="frame" x="0.0" y="0.0" width="303" height="22"/>
@@ -288,6 +300,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -304,9 +319,12 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Smt-T6-eNF" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Mzd-89-c5e"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="ZbM-cP-Lsb">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <tabBar key="tabBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" itemPositioning="fill" id="ZbM-cP-Lsb">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.29803921570000003" green="0.68627450980000004" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="2BJ-p5-bZb" kind="relationship" relationship="viewControllers" id="eum-kZ-80S"/>
@@ -322,6 +340,7 @@
         <image name="1488569581_analytics.png" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="M35-Y5-fSL"/>
+        <segue reference="Pfw-CH-ne5"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

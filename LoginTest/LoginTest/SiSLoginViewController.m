@@ -40,9 +40,9 @@
     
   //Check user defaults for registered users
     
-  /*  NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+   // NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
     
-    if (![defaults boolForKey:@"registered"]) {
+   /* if (![defaults boolForKey:@"registered"]) {
         NSLog(@"No user registered");
         self.loginBtn.hidden = YES;
 
