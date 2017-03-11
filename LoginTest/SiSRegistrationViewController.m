@@ -120,7 +120,7 @@
 - (void) openStatisticsView {
     
     UIStoryboard* sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    SiSStatisticsViewController* vc = [sb instantiateViewControllerWithIdentifier:@"SiSStatistics"];
+    SiSStatisticsViewController* vc = [sb instantiateViewControllerWithIdentifier:@"SiSStatisticsNavigationController"];
     [self presentViewController:vc animated:YES completion:nil];
 }
 
