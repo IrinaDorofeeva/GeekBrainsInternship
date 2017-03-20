@@ -7,7 +7,7 @@
 //
 
 #import "GBPerson+CoreDataClass.h"
-#import "GBKeyWord+CoreDataClass.h"
+#import "GBKeyWord.h"
 @implementation GBPerson
 
 @end

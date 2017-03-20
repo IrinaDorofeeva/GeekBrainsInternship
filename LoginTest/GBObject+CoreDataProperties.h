@@ -1,22 +1,22 @@
 //
-//  GBSite+CoreDataClass.h
+//  GBObject+CoreDataProperties.h
 //  LoginTest
 //
 //  Created by Mac on 3/20/17.
 //  Copyright © 2017 Stanly Shiyanovskiy. All rights reserved.
+//  This file was automatically generated and should not be edited.
 //
 
-#import <Foundation/Foundation.h>
 #import "GBObject+CoreDataClass.h"
 
-@class GBPage;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GBSite : GBObject
+@interface GBObject (CoreDataProperties)
+
++ (NSFetchRequest<GBObject *> *)fetchRequest;
+
 
 @end
 
 NS_ASSUME_NONNULL_END
-
-#import "GBSite+CoreDataProperties.h"

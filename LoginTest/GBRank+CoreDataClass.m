@@ -7,8 +7,8 @@
 //
 
 #import "GBRank+CoreDataClass.h"
-#import "GBKeyWord+CoreDataClass.h"
-#import "GBPage+CoreDataClass.h"
+#import "GBKeyWord.h"
+#import "GBPage.h"
 @implementation GBRank
 
 @end

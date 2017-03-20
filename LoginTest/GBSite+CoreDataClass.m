@@ -7,7 +7,7 @@
 //
 
 #import "GBSite+CoreDataClass.h"
-#import "GBPage+CoreDataClass.h"
+#import "GBPage.h"
 @implementation GBSite
 
 @end

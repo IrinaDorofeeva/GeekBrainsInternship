@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
+#import "GBObject+CoreDataClass.h"
 
 @class GBKeyWord, GBPage;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GBRank : NSManagedObject
+@interface GBRank : GBObject
 
 @end
 
