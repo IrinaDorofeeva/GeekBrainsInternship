@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "GBDataManager.h"
 
-@interface GBCoreDataViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface GBCoreDataViewController : UIViewController <NSFetchedResultsControllerDelegate>
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext* managedObjectContext;
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+//- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 
 @end

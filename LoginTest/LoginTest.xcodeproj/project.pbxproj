@@ -9,10 +9,24 @@
 /* Begin PBXBuildFile section */
 		0421F5681E73877500B2E4AC /* SiSRegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0421F5671E73877500B2E4AC /* SiSRegistrationViewController.m */; };
 		0421F56B1E738B7900B2E4AC /* SiSStatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0421F56A1E738B7900B2E4AC /* SiSStatisticsViewController.m */; };
-		0421F56D1E73AEA800B2E4AC /* dailybt.png in Resources */ = {isa = PBXBuildFile; fileRef = 0421F56C1E73AEA800B2E4AC /* dailybt.png */; };
-		0421F56F1E73AEAE00B2E4AC /* generalbt.png in Resources */ = {isa = PBXBuildFile; fileRef = 0421F56E1E73AEAE00B2E4AC /* generalbt.png */; };
+		042855CE1E7E06390017C816 /* GBInternship.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 042855CC1E7E06390017C816 /* GBInternship.xcdatamodeld */; };
+		0428563F1E7E2DB80017C816 /* GBDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0428563E1E7E2DB80017C816 /* GBDataManager.m */; };
+		042856451E7E4B4A0017C816 /* GBGeneralStatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042856441E7E4B4A0017C816 /* GBGeneralStatisticsViewController.m */; };
+		042856481E7F18130017C816 /* GBCoreDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042856471E7F18130017C816 /* GBCoreDataViewController.m */; };
 		042F51FB1E70FF8000D021C3 /* 1488569581_analytics.png in Resources */ = {isa = PBXBuildFile; fileRef = 042F51FA1E70FF8000D021C3 /* 1488569581_analytics.png */; };
 		042F51FC1E71002900D021C3 /* Magistral.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 042F51F91E70FF7A00D021C3 /* Magistral.TTF */; };
+		04A9997E1E8067BF0007F104 /* GBUser+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A999671E8067BF0007F104 /* GBUser+CoreDataClass.m */; };
+		04A9997F1E8067BF0007F104 /* GBUser+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A999691E8067BF0007F104 /* GBUser+CoreDataProperties.m */; };
+		04A999801E8067BF0007F104 /* GBSite+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A9996B1E8067BF0007F104 /* GBSite+CoreDataClass.m */; };
+		04A999811E8067BF0007F104 /* GBSite+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A9996D1E8067BF0007F104 /* GBSite+CoreDataProperties.m */; };
+		04A999821E8067BF0007F104 /* GBKeyWord+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A9996F1E8067BF0007F104 /* GBKeyWord+CoreDataClass.m */; };
+		04A999831E8067BF0007F104 /* GBKeyWord+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A999711E8067BF0007F104 /* GBKeyWord+CoreDataProperties.m */; };
+		04A999841E8067BF0007F104 /* GBPerson+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A999731E8067BF0007F104 /* GBPerson+CoreDataClass.m */; };
+		04A999851E8067BF0007F104 /* GBPerson+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A999751E8067BF0007F104 /* GBPerson+CoreDataProperties.m */; };
+		04A999861E8067BF0007F104 /* GBRank+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A999771E8067BF0007F104 /* GBRank+CoreDataClass.m */; };
+		04A999871E8067BF0007F104 /* GBRank+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A999791E8067BF0007F104 /* GBRank+CoreDataProperties.m */; };
+		04A999881E8067BF0007F104 /* GBPage+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A9997B1E8067BF0007F104 /* GBPage+CoreDataClass.m */; };
+		04A999891E8067BF0007F104 /* GBPage+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A9997D1E8067BF0007F104 /* GBPage+CoreDataProperties.m */; };
 		57B642AF1E6C2BE900B2C613 /* SiSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B642AE1E6C2BE900B2C613 /* SiSLoginViewController.m */; };
 		57BE53AE1E6C281600A7815C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57BE53AD1E6C281600A7815C /* main.m */; };
 		57BE53B11E6C281600A7815C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57BE53B01E6C281600A7815C /* AppDelegate.m */; };
@@ -45,10 +59,40 @@
 		0421F5671E73877500B2E4AC /* SiSRegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SiSRegistrationViewController.m; path = ../SiSRegistrationViewController.m; sourceTree = "<group>"; };
 		0421F5691E738B7900B2E4AC /* SiSStatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSStatisticsViewController.h; sourceTree = "<group>"; };
 		0421F56A1E738B7900B2E4AC /* SiSStatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSStatisticsViewController.m; sourceTree = "<group>"; };
-		0421F56C1E73AEA800B2E4AC /* dailybt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dailybt.png; path = ../../../../Desktop/dailybt.png; sourceTree = "<group>"; };
-		0421F56E1E73AEAE00B2E4AC /* generalbt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = generalbt.png; path = ../../../../Desktop/generalbt.png; sourceTree = "<group>"; };
+		042855CD1E7E06390017C816 /* GBInternship.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GBInternship.xcdatamodel; sourceTree = "<group>"; };
+		042855CF1E7E229E0017C816 /* LoginTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LoginTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		0428563D1E7E2DB80017C816 /* GBDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBDataManager.h; sourceTree = "<group>"; };
+		0428563E1E7E2DB80017C816 /* GBDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBDataManager.m; sourceTree = "<group>"; };
+		042856431E7E4B4A0017C816 /* GBGeneralStatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBGeneralStatisticsViewController.h; sourceTree = "<group>"; };
+		042856441E7E4B4A0017C816 /* GBGeneralStatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBGeneralStatisticsViewController.m; sourceTree = "<group>"; };
+		042856461E7F18130017C816 /* GBCoreDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBCoreDataViewController.h; sourceTree = "<group>"; };
+		042856471E7F18130017C816 /* GBCoreDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBCoreDataViewController.m; sourceTree = "<group>"; };
 		042F51F91E70FF7A00D021C3 /* Magistral.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = Magistral.TTF; path = ../../../Desktop/Internship/Magistral.TTF; sourceTree = "<group>"; };
 		042F51FA1E70FF8000D021C3 /* 1488569581_analytics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1488569581_analytics.png; path = "/Users/Mac/Desktop/Internship/LoginTest-master/LoginTest/../../1488569581_analytics.png"; sourceTree = "<absolute>"; };
+		04A999661E8067BF0007F104 /* GBUser+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBUser+CoreDataClass.h"; sourceTree = "<group>"; };
+		04A999671E8067BF0007F104 /* GBUser+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBUser+CoreDataClass.m"; sourceTree = "<group>"; };
+		04A999681E8067BF0007F104 /* GBUser+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBUser+CoreDataProperties.h"; sourceTree = "<group>"; };
+		04A999691E8067BF0007F104 /* GBUser+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBUser+CoreDataProperties.m"; sourceTree = "<group>"; };
+		04A9996A1E8067BF0007F104 /* GBSite+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBSite+CoreDataClass.h"; sourceTree = "<group>"; };
+		04A9996B1E8067BF0007F104 /* GBSite+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBSite+CoreDataClass.m"; sourceTree = "<group>"; };
+		04A9996C1E8067BF0007F104 /* GBSite+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBSite+CoreDataProperties.h"; sourceTree = "<group>"; };
+		04A9996D1E8067BF0007F104 /* GBSite+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBSite+CoreDataProperties.m"; sourceTree = "<group>"; };
+		04A9996E1E8067BF0007F104 /* GBKeyWord+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBKeyWord+CoreDataClass.h"; sourceTree = "<group>"; };
+		04A9996F1E8067BF0007F104 /* GBKeyWord+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBKeyWord+CoreDataClass.m"; sourceTree = "<group>"; };
+		04A999701E8067BF0007F104 /* GBKeyWord+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBKeyWord+CoreDataProperties.h"; sourceTree = "<group>"; };
+		04A999711E8067BF0007F104 /* GBKeyWord+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBKeyWord+CoreDataProperties.m"; sourceTree = "<group>"; };
+		04A999721E8067BF0007F104 /* GBPerson+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBPerson+CoreDataClass.h"; sourceTree = "<group>"; };
+		04A999731E8067BF0007F104 /* GBPerson+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBPerson+CoreDataClass.m"; sourceTree = "<group>"; };
+		04A999741E8067BF0007F104 /* GBPerson+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBPerson+CoreDataProperties.h"; sourceTree = "<group>"; };
+		04A999751E8067BF0007F104 /* GBPerson+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBPerson+CoreDataProperties.m"; sourceTree = "<group>"; };
+		04A999761E8067BF0007F104 /* GBRank+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBRank+CoreDataClass.h"; sourceTree = "<group>"; };
+		04A999771E8067BF0007F104 /* GBRank+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBRank+CoreDataClass.m"; sourceTree = "<group>"; };
+		04A999781E8067BF0007F104 /* GBRank+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBRank+CoreDataProperties.h"; sourceTree = "<group>"; };
+		04A999791E8067BF0007F104 /* GBRank+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBRank+CoreDataProperties.m"; sourceTree = "<group>"; };
+		04A9997A1E8067BF0007F104 /* GBPage+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBPage+CoreDataClass.h"; sourceTree = "<group>"; };
+		04A9997B1E8067BF0007F104 /* GBPage+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBPage+CoreDataClass.m"; sourceTree = "<group>"; };
+		04A9997C1E8067BF0007F104 /* GBPage+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBPage+CoreDataProperties.h"; sourceTree = "<group>"; };
+		04A9997D1E8067BF0007F104 /* GBPage+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBPage+CoreDataProperties.m"; sourceTree = "<group>"; };
 		57B642AD1E6C2BE900B2C613 /* SiSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSLoginViewController.h; sourceTree = "<group>"; };
 		57B642AE1E6C2BE900B2C613 /* SiSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSLoginViewController.m; sourceTree = "<group>"; };
 		57BE53A91E6C281600A7815C /* LoginTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,15 +136,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0428563C1E7E25920017C816 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				042855CC1E7E06390017C816 /* GBInternship.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		57BE53A01E6C281600A7815C = {
 			isa = PBXGroup;
 			children = (
+				04A999661E8067BF0007F104 /* GBUser+CoreDataClass.h */,
+				04A999671E8067BF0007F104 /* GBUser+CoreDataClass.m */,
+				04A999681E8067BF0007F104 /* GBUser+CoreDataProperties.h */,
+				04A999691E8067BF0007F104 /* GBUser+CoreDataProperties.m */,
+				04A9996A1E8067BF0007F104 /* GBSite+CoreDataClass.h */,
+				04A9996B1E8067BF0007F104 /* GBSite+CoreDataClass.m */,
+				04A9996C1E8067BF0007F104 /* GBSite+CoreDataProperties.h */,
+				04A9996D1E8067BF0007F104 /* GBSite+CoreDataProperties.m */,
+				04A9996E1E8067BF0007F104 /* GBKeyWord+CoreDataClass.h */,
+				04A9996F1E8067BF0007F104 /* GBKeyWord+CoreDataClass.m */,
+				04A999701E8067BF0007F104 /* GBKeyWord+CoreDataProperties.h */,
+				04A999711E8067BF0007F104 /* GBKeyWord+CoreDataProperties.m */,
+				04A999721E8067BF0007F104 /* GBPerson+CoreDataClass.h */,
+				04A999731E8067BF0007F104 /* GBPerson+CoreDataClass.m */,
+				04A999741E8067BF0007F104 /* GBPerson+CoreDataProperties.h */,
+				04A999751E8067BF0007F104 /* GBPerson+CoreDataProperties.m */,
+				04A999761E8067BF0007F104 /* GBRank+CoreDataClass.h */,
+				04A999771E8067BF0007F104 /* GBRank+CoreDataClass.m */,
+				04A999781E8067BF0007F104 /* GBRank+CoreDataProperties.h */,
+				04A999791E8067BF0007F104 /* GBRank+CoreDataProperties.m */,
+				04A9997A1E8067BF0007F104 /* GBPage+CoreDataClass.h */,
+				04A9997B1E8067BF0007F104 /* GBPage+CoreDataClass.m */,
+				04A9997C1E8067BF0007F104 /* GBPage+CoreDataProperties.h */,
+				04A9997D1E8067BF0007F104 /* GBPage+CoreDataProperties.m */,
+				0428563C1E7E25920017C816 /* Model */,
 				57BE53AB1E6C281600A7815C /* LoginTest */,
 				57BE53C51E6C281600A7815C /* LoginTestTests */,
 				57BE53D01E6C281600A7815C /* LoginTestUITests */,
 				57BE53AA1E6C281600A7815C /* Products */,
 				042F51F91E70FF7A00D021C3 /* Magistral.TTF */,
 				042F51FA1E70FF8000D021C3 /* 1488569581_analytics.png */,
+				042855CF1E7E229E0017C816 /* LoginTest-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,8 +195,12 @@
 		57BE53AB1E6C281600A7815C /* LoginTest */ = {
 			isa = PBXGroup;
 			children = (
+				042856461E7F18130017C816 /* GBCoreDataViewController.h */,
+				042856471E7F18130017C816 /* GBCoreDataViewController.m */,
 				57BE53AF1E6C281600A7815C /* AppDelegate.h */,
 				57BE53B01E6C281600A7815C /* AppDelegate.m */,
+				0428563D1E7E2DB80017C816 /* GBDataManager.h */,
+				0428563E1E7E2DB80017C816 /* GBDataManager.m */,
 				0421F5661E73877500B2E4AC /* SiSRegistrationViewController.h */,
 				0421F5671E73877500B2E4AC /* SiSRegistrationViewController.m */,
 				57B642AD1E6C2BE900B2C613 /* SiSLoginViewController.h */,
@@ -126,7 +208,8 @@
 				0421F5691E738B7900B2E4AC /* SiSStatisticsViewController.h */,
 				0421F56A1E738B7900B2E4AC /* SiSStatisticsViewController.m */,
 				57BE53B51E6C281600A7815C /* Main.storyboard */,
-				0421F56E1E73AEAE00B2E4AC /* generalbt.png */,
+				042856431E7E4B4A0017C816 /* GBGeneralStatisticsViewController.h */,
+				042856441E7E4B4A0017C816 /* GBGeneralStatisticsViewController.m */,
 				57BE53B81E6C281600A7815C /* Assets.xcassets */,
 				57BE53BA1E6C281600A7815C /* LaunchScreen.storyboard */,
 				57BE53BD1E6C281600A7815C /* Info.plist */,
@@ -139,7 +222,6 @@
 			isa = PBXGroup;
 			children = (
 				57BE53AD1E6C281600A7815C /* main.m */,
-				0421F56C1E73AEA800B2E4AC /* dailybt.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -225,12 +307,13 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = SiS;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Stanly Shiyanovskiy";
 				TargetAttributes = {
 					57BE53A81E6C281600A7815C = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 3PTYV272Z4;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					57BE53C11E6C281600A7815C = {
@@ -275,9 +358,7 @@
 				042F51FC1E71002900D021C3 /* Magistral.TTF in Resources */,
 				57BE53BC1E6C281600A7815C /* LaunchScreen.storyboard in Resources */,
 				042F51FB1E70FF8000D021C3 /* 1488569581_analytics.png in Resources */,
-				0421F56D1E73AEA800B2E4AC /* dailybt.png in Resources */,
 				57BE53B91E6C281600A7815C /* Assets.xcassets in Resources */,
-				0421F56F1E73AEAE00B2E4AC /* generalbt.png in Resources */,
 				57BE53B71E6C281600A7815C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,11 +384,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A999891E8067BF0007F104 /* GBPage+CoreDataProperties.m in Sources */,
 				57BE53B11E6C281600A7815C /* AppDelegate.m in Sources */,
+				04A9997F1E8067BF0007F104 /* GBUser+CoreDataProperties.m in Sources */,
+				04A999871E8067BF0007F104 /* GBRank+CoreDataProperties.m in Sources */,
+				04A999881E8067BF0007F104 /* GBPage+CoreDataClass.m in Sources */,
 				0421F56B1E738B7900B2E4AC /* SiSStatisticsViewController.m in Sources */,
 				57B642AF1E6C2BE900B2C613 /* SiSLoginViewController.m in Sources */,
 				57BE53AE1E6C281600A7815C /* main.m in Sources */,
+				042855CE1E7E06390017C816 /* GBInternship.xcdatamodeld in Sources */,
+				042856481E7F18130017C816 /* GBCoreDataViewController.m in Sources */,
+				04A999841E8067BF0007F104 /* GBPerson+CoreDataClass.m in Sources */,
+				04A999811E8067BF0007F104 /* GBSite+CoreDataProperties.m in Sources */,
+				04A999821E8067BF0007F104 /* GBKeyWord+CoreDataClass.m in Sources */,
+				04A999861E8067BF0007F104 /* GBRank+CoreDataClass.m in Sources */,
+				04A999801E8067BF0007F104 /* GBSite+CoreDataClass.m in Sources */,
+				04A999851E8067BF0007F104 /* GBPerson+CoreDataProperties.m in Sources */,
+				0428563F1E7E2DB80017C816 /* GBDataManager.m in Sources */,
 				0421F5681E73877500B2E4AC /* SiSRegistrationViewController.m in Sources */,
+				042856451E7E4B4A0017C816 /* GBGeneralStatisticsViewController.m in Sources */,
+				04A9997E1E8067BF0007F104 /* GBUser+CoreDataClass.m in Sources */,
+				04A999831E8067BF0007F104 /* GBKeyWord+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +477,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -428,6 +526,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -456,12 +555,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3PTYV272Z4;
 				INFOPLIST_FILE = LoginTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SiS.LoginTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LoginTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -469,12 +572,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3PTYV272Z4;
 				INFOPLIST_FILE = LoginTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SiS.LoginTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LoginTest-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -568,6 +674,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		042855CC1E7E06390017C816 /* GBInternship.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				042855CD1E7E06390017C816 /* GBInternship.xcdatamodel */,
+			);
+			currentVersion = 042855CD1E7E06390017C816 /* GBInternship.xcdatamodel */;
+			path = GBInternship.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 57BE53A11E6C281600A7815C /* Project object */;
 }

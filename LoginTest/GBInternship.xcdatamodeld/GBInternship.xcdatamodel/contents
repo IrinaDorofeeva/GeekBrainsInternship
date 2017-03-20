@@ -19,7 +19,6 @@
     <entity name="GBPerson" representedClassName="GBPerson" syncable="YES">
         <attribute name="personID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="personName" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="generalRank" optional="YES" toMany="YES" deletionRule="Nullify" syncable="YES"/>
         <relationship name="keyWord" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="GBKeyWord" inverseName="person" inverseEntity="GBKeyWord" syncable="YES"/>
     </entity>
     <entity name="GBRank" representedClassName="GBRank" syncable="YES">
@@ -33,7 +32,6 @@
     <entity name="GBSite" representedClassName="GBSite" syncable="YES">
         <attribute name="siteID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="siteName" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="generalRank" optional="YES" toMany="YES" deletionRule="Nullify" syncable="YES"/>
         <relationship name="page" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="GBPage" inverseName="site" inverseEntity="GBPage" syncable="YES"/>
     </entity>
     <entity name="GBUser" representedClassName="GBUser" syncable="YES">
@@ -44,9 +42,9 @@
     <elements>
         <element name="GBKeyWord" positionX="-4734" positionY="-3735" width="128" height="118"/>
         <element name="GBPage" positionX="-4419" positionY="-3757" width="128" height="148"/>
-        <element name="GBPerson" positionX="-4907" positionY="-3706" width="128" height="103"/>
+        <element name="GBPerson" positionX="-4907" positionY="-3706" width="128" height="88"/>
         <element name="GBRank" positionX="-4572" positionY="-3807" width="128" height="133"/>
-        <element name="GBSite" positionX="-4250" positionY="-3706" width="128" height="103"/>
+        <element name="GBSite" positionX="-4502" positionY="-3564" width="128" height="88"/>
         <element name="GBUser" positionX="-4905" positionY="-3870" width="128" height="88"/>
     </elements>
 </model>

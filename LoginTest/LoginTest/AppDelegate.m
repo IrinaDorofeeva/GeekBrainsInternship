@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "GBDataManager.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [[GBDataManager sharedManager] addData];
+   // [[GBDataManager sharedManager] deleteData];
+    [[GBDataManager sharedManager] printData];
+    
+   // [[GBDataManager sharedManager] addSites];
+    
+    
     return YES;
 }
 

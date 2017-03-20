@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GBCoreDataViewController.h"
 
-@interface GBGeneralStatisticsViewController : UIViewController
+
+@interface GBGeneralStatisticsViewController : GBCoreDataViewController <UIPickerViewDelegate, UIPickerViewDataSource>
+@property (strong, nonatomic) NSArray *personsArray;
+//@property (weak, nonatomic) IBOutlet UIPickerView *GBPersonGSOutlet;
+@property (weak, nonatomic) IBOutlet UIPickerView *personPicker;
+@property (weak, nonatomic) IBOutlet UILabel *personPickedLabel;
 
 @end
