@@ -19,7 +19,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-   // [[GBDataManager sharedManager] addData];
+// uncomment [[GBDataManager sharedManager] addData] and run one time to populate core data
+    
+     [[GBDataManager sharedManager] addData];
+    
+    
+    
    // [[GBDataManager sharedManager] deleteData];
    // [[GBDataManager sharedManager] addData];
    // [[GBDataManager sharedManager] printData];
