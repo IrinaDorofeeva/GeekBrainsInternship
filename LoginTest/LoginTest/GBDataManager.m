@@ -12,6 +12,7 @@
 #import "GBPage+CoreDataClass.h"
 #import "GBKeyWord+CoreDataClass.h"
 #import "GBRank+CoreDataClass.h"
+#import "GBObject+CoreDataClass.h"
 
 
 
@@ -19,13 +20,13 @@ static NSString* personNames[] = {
     @"Tramp", @"Putin", @"Medvedev"};
 
 static NSString* siteNames[] = {
-    @"lenta.tu", @"rbc.ru", @"cnn.com"};
+    @"lenta.ru", @"rbc.ru", @"cnn.com"};
 
 static NSString* personKeyWords[] = {
-    @"TrampWord", @"PutinWord", @"MedvedevWord"};
+    @"Tramp", @"Putin", @"Medvedev"};
 
 static NSString* pageURL[] = {
-    @"lenta.tu/Page", @"rbc.ru/Page", @"cnn.com/Page"};
+    @"lenta.ru", @"rbc.ru", @"cnn.com"};
 
 
 
@@ -75,31 +76,37 @@ static NSString* pageURL[] = {
         personKeyWord.keyWord = personKeyWords[i];
         [person.managedObjectContext save:nil];
         [personKeyWord.managedObjectContext save:nil];
-    
+        GBSite* site =
+        [NSEntityDescription insertNewObjectForEntityForName:@"GBSite"
+                                      inManagedObjectContext:self.managedObjectContext];
+        site.siteName = siteNames[i];
+        [site.managedObjectContext save:nil];
         
+        GBPage* page =
+        [NSEntityDescription insertNewObjectForEntityForName:@"GBPage"
+                                      inManagedObjectContext:self.managedObjectContext];
+        page.pageURL = pageURL[i];
+        [page.managedObjectContext save:nil];
+     
+    }
+    
+    
+    for (int i = 0; i<3; i++){
+
         for (int j = 0; j<3; j++)
         {
-            GBSite* site =
-            [NSEntityDescription insertNewObjectForEntityForName:@"GBSite"
-                                          inManagedObjectContext:self.managedObjectContext];
-            site.siteName = siteNames[j];
-            [site.managedObjectContext save:nil];
             
-            GBPage* page =
-            [NSEntityDescription insertNewObjectForEntityForName:@"GBPage"
-                                          inManagedObjectContext:self.managedObjectContext];
-            page.pageURL = pageURL[j];
-            [page.managedObjectContext save:nil];
-            
-            
+    
             GBRank* gRank = [NSEntityDescription insertNewObjectForEntityForName:@"GBRank"
-                                                         inManagedObjectContext:self.managedObjectContext];
+                                                     inManagedObjectContext:self.managedObjectContext];
             gRank.rank=i+j;
-            //arc4random();
-            gRank.page=page;
-            gRank.keyWord=personKeyWord;
             
-            NSLog(@"rank is %d for %@ for %@",gRank.rank, personKeyWord.keyWord, page.pageURL);
+            //arc4random();
+            
+            gRank.page= [[self oneClass:@"GBPage"] objectAtIndex:i];
+            gRank.keyWord=[[self oneClass:@"GBKeyWord"] objectAtIndex:j];;
+            
+            NSLog(@"rank is %d for %@ for %@",gRank.rank,gRank.keyWord.keyWord, gRank.page.pageURL);
             
             [gRank.managedObjectContext save:nil];
         }
@@ -136,10 +143,21 @@ static NSString* pageURL[] = {
 - (void) deleteData {
     
     
+    
+    NSArray* resultArray = [self oneClass:@"GBObject"];
+    for (id object in resultArray) {
+        [self.managedObjectContext deleteObject:object];
+    }
+    [self.managedObjectContext save:nil];
+}
+
+
+- (NSArray*) allObjects {
+    
     NSFetchRequest* request = [[NSFetchRequest alloc] init];
     
     NSEntityDescription* description =
-    [NSEntityDescription entityForName:@"GBRank"
+    [NSEntityDescription entityForName:@"GBObject"
                 inManagedObjectContext:self.managedObjectContext];
     
     [request setEntity:description];
@@ -150,12 +168,28 @@ static NSString* pageURL[] = {
         NSLog(@"%@", [requestError localizedDescription]);
     }
     
-    for (id object in resultArray) {
-        [self.managedObjectContext deleteObject:object];
-    }
-    [self.managedObjectContext save:nil];
+    return resultArray;
 }
 
+
+- (NSArray*) oneClass: (NSString*) entityName  {
+    
+    NSFetchRequest* request = [[NSFetchRequest alloc] init];
+    
+    NSEntityDescription* description =
+    [NSEntityDescription entityForName:entityName
+                inManagedObjectContext:self.managedObjectContext];
+    
+    [request setEntity:description];
+    
+    NSError* requestError = nil;
+    NSArray* resultArray = [self.managedObjectContext executeFetchRequest:request error:&requestError];
+    if (requestError) {
+        NSLog(@"%@", [requestError localizedDescription]);
+    }
+    
+    return resultArray;
+}
 
 
 

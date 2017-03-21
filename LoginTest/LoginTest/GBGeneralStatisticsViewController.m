@@ -8,8 +8,17 @@
 
 #import "GBGeneralStatisticsViewController.h"
 #import "GBPerson+CoreDataProperties.h"
+#import "GBSite+CoreDataProperties.h"
+#import "GBRank+CoreDataProperties.h"
+#import "GBKeyWord+CoreDataProperties.h"
+#import "GBPage+CoreDataProperties.h"
+
+
 
 @interface GBGeneralStatisticsViewController ()
+
+#define sitePicker 0
+#define personPicker 1
 
 @end
 
@@ -19,7 +28,7 @@
 
 
 
-- (NSFetchedResultsController *)fetchedResultsController
+/*- (NSFetchedResultsController *)fetchedResultsController
 {
     if (_fetchedResultsController != nil) {
         return _fetchedResultsController;
@@ -57,59 +66,90 @@
     }
     
     return _fetchedResultsController;
-}
+}*/
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //getting data from data base
     
-    NSFetchRequest* request = [[NSFetchRequest alloc] init];
-    
+NSFetchRequest* request = [[NSFetchRequest alloc] init];
     NSEntityDescription* description =
     [NSEntityDescription entityForName:@"GBPerson"
                 inManagedObjectContext:self.managedObjectContext];
-    
     [request setEntity:description];
-    
     NSError* requestError = nil;
-    
-    NSArray* resultArray = [self.managedObjectContext executeFetchRequest:request error:&requestError];
+    _personsArray = [self.managedObjectContext executeFetchRequest:request error:&requestError];
     if (requestError) {
         NSLog(@"%@", [requestError localizedDescription]);
     }
     
-    _personsArray=resultArray;
+    
+    description =
+    [NSEntityDescription entityForName:@"GBSite"
+                inManagedObjectContext:self.managedObjectContext];
+    [request setEntity:description];
+    requestError = nil;
+    _sitesArray = [self.managedObjectContext executeFetchRequest:request error:&requestError];
+    if (requestError) {
+        NSLog(@"%@", [requestError localizedDescription]);
+    }
     
     
-    //NSLog(@"Model is %@", context.persistentStoreCoordinator.managedObjectModel)
+    description =
+    [NSEntityDescription entityForName:@"GBRank"
+                inManagedObjectContext:self.managedObjectContext];
+    [request setEntity:description];
+    requestError = nil;
+    _ranksArray = [self.managedObjectContext executeFetchRequest:request error:&requestError];
+    if (requestError) {
+        NSLog(@"%@", [requestError localizedDescription]);
+    }
+    
+    
+  /*  NSPredicate* predicate = [NSPredicate predicateWithFormat:@"rank.page.pageURL == %@", _sitePickedLabel];
+    [request setPredicate:predicate];
+    requestError = nil;
+    _filteredRanksArray = [self.managedObjectContext executeFetchRequest:request error:&requestError];
+    if (requestError) {
+        NSLog(@"%@", [requestError localizedDescription]);
+    }
+
+    NSLog(@"filteres array size %d",_filteredRanksArray.count);*/
+
+}
+-(void) updateRankArray{
+    
+    NSFetchRequest* request = [[NSFetchRequest alloc] init];
+
+    [request setEntity:[NSEntityDescription entityForName:@"GBRank"
+                                   inManagedObjectContext:self.managedObjectContext]];
+    NSError* requestError = nil;
+    
+    
+    [request setPredicate:[NSPredicate predicateWithFormat:@"page.pageURL ==  %@",_sitePickedLabel.text ]];
+    //[request setPredicate:[NSPredicate predicateWithFormat:@"keyWord.keyWord ==  %@",_personPickedLabel.text ]];
+    
+   // [request setPredicate:[NSPredicate predicateWithFormat:@"page.pageURL ==  %@ AND  keyWord.keyWord ==  %@",_sitePickedLabel.text,_personPickedLabel.text ]];
    
-   //for (id object in  _personsArray) {
-        
-     //     GBPerson* person = (GBPerson*) object;
-       //     NSLog(@"Person: %@", person.personName);
-       // }
     
+    //[request setPredicate: [NSPredicate predicateWithFormat:@"SUBQUERY(rank, $rank, $rank.page.pageURL == %@)", @"rbc.ru"]];
     
-    GBPerson* person = (GBPerson*) _personsArray[1];
+    _filteredRanksArray = [self.managedObjectContext executeFetchRequest:request error:&requestError];
+    if (requestError) {
+        NSLog(@"%@", [requestError localizedDescription]);
+    }
     
-    NSLog(@"Person: %@", person.personName);
-    // NSLog(@"Person: %@", _personsNames[1].personName);
-    // Do any additional setup after loading the view.
-    
-    
-    
-    
-    
-    
+    NSLog(@"filteres array size %d",_filteredRanksArray.count);
+
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 
 #pragma mark PickerView DataSource
@@ -123,37 +163,173 @@
 - (NSInteger)pickerView:(UIPickerView *)pickerView
 numberOfRowsInComponent:(NSInteger)component
 {
-    return _personsArray.count;
+    int count;
+    if(pickerView.tag == sitePicker)
+    {
+        count =_sitesArray.count;
+        
+    }
+    else if (pickerView.tag == personPicker)
+    {
+        count = _personsArray.count;
+    }
+return count;
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView
              titleForRow:(NSInteger)row
             forComponent:(NSInteger)component
 {
+    NSString* stringInPicker;
     
-    GBPerson* person = (GBPerson*) _personsArray[row];
-    
-    return person.personName;
+    if(pickerView.tag == sitePicker)
+    {
+        GBSite* site = (GBSite*) _sitesArray[row];
+        
+        stringInPicker = site.siteName;
+        
+    }
+    else if (pickerView.tag == personPicker)
+    {
+        GBPerson* person = (GBPerson*) _personsArray[row];
+        stringInPicker =person.personName;
+    }
+    return stringInPicker;
 } 
 
 
 
 #pragma mark PickerView Delegate
+
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row
       inComponent:(NSInteger)component
 {
    // float rate = [_exchangeRates[row] floatValue];
     //float dollars = [_dollarText.text floatValue];
     //float result = dollars * rate;
-    
+    if(pickerView.tag == personPicker)
+    {
     GBPerson* person = (GBPerson*) _personsArray[row];
     NSString *resultString = [[NSString alloc] initWithFormat:
                               @"%@",
                               person.personName];
  
     _personPickedLabel.text = resultString;
+        
+        [self updateRankArray];
+        [_ranksTable reloadData];
+    }
+    else if(pickerView.tag == sitePicker){
+        
+        GBSite* site = (GBSite*) _sitesArray[row];
+        NSString *resultString = [[NSString alloc] initWithFormat:
+                                  @"%@",
+                                  site.siteName];
+        
+        _sitePickedLabel.text = resultString;
+        [self updateRankArray];
+        [_ranksTable reloadData];
+    
+    
+    }
 }
 
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    NSLog( @"%d", _filteredRanksArray.count);
+    return _filteredRanksArray.count;
+    
+    
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    GBRank* rank = (GBRank*) _filteredRanksArray[indexPath.row];
+    //NSString *resultString = [[NSString alloc] initWithFormat:
+      //                        @"%@",
+        //                      site.siteName];
+    
+   // Music *obj = [arrData objectAtindex:indexPath.row];
+    cell.textLabel.text = [[NSString alloc] initWithFormat:
+                                                  @"%hd is for %@ on %@",rank.rank, rank.keyWord.keyWord, rank.page.pageURL];
+    // Configure the cell...
+    // cell.textLabel.text = @"*******************************";
+    return cell;
+}
+
+
+
+
+
+
+#pragma mark - Fetched results controller
+
+/*
+
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
+{
+    [self.tableView beginUpdates];
+}
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo
+           atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
+{
+    switch(type) {
+        case NSFetchedResultsChangeInsert:
+            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+    }
+}
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject
+       atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type
+      newIndexPath:(NSIndexPath *)newIndexPath
+{
+    UITableView *tableView = self.tableView;
+    
+    switch(type) {
+        case NSFetchedResultsChangeInsert:
+            [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeUpdate:
+            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            break;
+            
+        case NSFetchedResultsChangeMove:
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+    }
+}
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
+{
+    [self.tableView endUpdates];
+}
+*/
 /*
 #pragma mark - Navigation
 

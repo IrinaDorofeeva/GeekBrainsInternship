@@ -23,6 +23,8 @@
 
 - (void) addData;
 - (void) printData;
--(void) deleteData;
+- (void) deleteData;
+- (NSArray*) allObjects;
+- (NSArray*) oneClass: (NSString*) entityName;
 
 @end

@@ -15,18 +15,18 @@
 		042856481E7F18130017C816 /* GBCoreDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042856471E7F18130017C816 /* GBCoreDataViewController.m */; };
 		042F51FB1E70FF8000D021C3 /* 1488569581_analytics.png in Resources */ = {isa = PBXBuildFile; fileRef = 042F51FA1E70FF8000D021C3 /* 1488569581_analytics.png */; };
 		042F51FC1E71002900D021C3 /* Magistral.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 042F51F91E70FF7A00D021C3 /* Magistral.TTF */; };
-		04A9997E1E8067BF0007F104 /* GBUser+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A999671E8067BF0007F104 /* GBUser+CoreDataClass.m */; };
-		04A9997F1E8067BF0007F104 /* GBUser+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A999691E8067BF0007F104 /* GBUser+CoreDataProperties.m */; };
-		04A999801E8067BF0007F104 /* GBSite+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A9996B1E8067BF0007F104 /* GBSite+CoreDataClass.m */; };
-		04A999811E8067BF0007F104 /* GBSite+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A9996D1E8067BF0007F104 /* GBSite+CoreDataProperties.m */; };
-		04A999821E8067BF0007F104 /* GBKeyWord+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A9996F1E8067BF0007F104 /* GBKeyWord+CoreDataClass.m */; };
-		04A999831E8067BF0007F104 /* GBKeyWord+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A999711E8067BF0007F104 /* GBKeyWord+CoreDataProperties.m */; };
-		04A999841E8067BF0007F104 /* GBPerson+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A999731E8067BF0007F104 /* GBPerson+CoreDataClass.m */; };
-		04A999851E8067BF0007F104 /* GBPerson+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A999751E8067BF0007F104 /* GBPerson+CoreDataProperties.m */; };
-		04A999861E8067BF0007F104 /* GBRank+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A999771E8067BF0007F104 /* GBRank+CoreDataClass.m */; };
-		04A999871E8067BF0007F104 /* GBRank+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A999791E8067BF0007F104 /* GBRank+CoreDataProperties.m */; };
-		04A999881E8067BF0007F104 /* GBPage+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A9997B1E8067BF0007F104 /* GBPage+CoreDataClass.m */; };
-		04A999891E8067BF0007F104 /* GBPage+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A9997D1E8067BF0007F104 /* GBPage+CoreDataProperties.m */; };
+		04A999A61E807B170007F104 /* GBPage+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A9998B1E807B170007F104 /* GBPage+CoreDataClass.m */; };
+		04A999A71E807B170007F104 /* GBPage+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A9998D1E807B170007F104 /* GBPage+CoreDataProperties.m */; };
+		04A999A81E807B170007F104 /* GBSite+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A9998F1E807B170007F104 /* GBSite+CoreDataClass.m */; };
+		04A999A91E807B170007F104 /* GBSite+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A999911E807B170007F104 /* GBSite+CoreDataProperties.m */; };
+		04A999AA1E807B170007F104 /* GBPerson+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A999931E807B170007F104 /* GBPerson+CoreDataClass.m */; };
+		04A999AB1E807B170007F104 /* GBPerson+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A999951E807B170007F104 /* GBPerson+CoreDataProperties.m */; };
+		04A999AC1E807B170007F104 /* GBKeyWord+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A999971E807B170007F104 /* GBKeyWord+CoreDataClass.m */; };
+		04A999AD1E807B170007F104 /* GBKeyWord+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A999991E807B170007F104 /* GBKeyWord+CoreDataProperties.m */; };
+		04A999AE1E807B170007F104 /* GBRank+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A9999B1E807B170007F104 /* GBRank+CoreDataClass.m */; };
+		04A999AF1E807B170007F104 /* GBRank+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A9999D1E807B170007F104 /* GBRank+CoreDataProperties.m */; };
+		04A999B01E807B170007F104 /* GBUser+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A9999F1E807B170007F104 /* GBUser+CoreDataClass.m */; };
+		04A999B11E807B170007F104 /* GBUser+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A999A11E807B170007F104 /* GBUser+CoreDataProperties.m */; };
 		57B642AF1E6C2BE900B2C613 /* SiSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B642AE1E6C2BE900B2C613 /* SiSLoginViewController.m */; };
 		57BE53AE1E6C281600A7815C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57BE53AD1E6C281600A7815C /* main.m */; };
 		57BE53B11E6C281600A7815C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57BE53B01E6C281600A7815C /* AppDelegate.m */; };
@@ -69,30 +69,30 @@
 		042856471E7F18130017C816 /* GBCoreDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBCoreDataViewController.m; sourceTree = "<group>"; };
 		042F51F91E70FF7A00D021C3 /* Magistral.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = Magistral.TTF; path = ../../../Desktop/Internship/Magistral.TTF; sourceTree = "<group>"; };
 		042F51FA1E70FF8000D021C3 /* 1488569581_analytics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1488569581_analytics.png; path = "/Users/Mac/Desktop/Internship/LoginTest-master/LoginTest/../../1488569581_analytics.png"; sourceTree = "<absolute>"; };
-		04A999661E8067BF0007F104 /* GBUser+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBUser+CoreDataClass.h"; sourceTree = "<group>"; };
-		04A999671E8067BF0007F104 /* GBUser+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBUser+CoreDataClass.m"; sourceTree = "<group>"; };
-		04A999681E8067BF0007F104 /* GBUser+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBUser+CoreDataProperties.h"; sourceTree = "<group>"; };
-		04A999691E8067BF0007F104 /* GBUser+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBUser+CoreDataProperties.m"; sourceTree = "<group>"; };
-		04A9996A1E8067BF0007F104 /* GBSite+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBSite+CoreDataClass.h"; sourceTree = "<group>"; };
-		04A9996B1E8067BF0007F104 /* GBSite+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBSite+CoreDataClass.m"; sourceTree = "<group>"; };
-		04A9996C1E8067BF0007F104 /* GBSite+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBSite+CoreDataProperties.h"; sourceTree = "<group>"; };
-		04A9996D1E8067BF0007F104 /* GBSite+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBSite+CoreDataProperties.m"; sourceTree = "<group>"; };
-		04A9996E1E8067BF0007F104 /* GBKeyWord+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBKeyWord+CoreDataClass.h"; sourceTree = "<group>"; };
-		04A9996F1E8067BF0007F104 /* GBKeyWord+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBKeyWord+CoreDataClass.m"; sourceTree = "<group>"; };
-		04A999701E8067BF0007F104 /* GBKeyWord+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBKeyWord+CoreDataProperties.h"; sourceTree = "<group>"; };
-		04A999711E8067BF0007F104 /* GBKeyWord+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBKeyWord+CoreDataProperties.m"; sourceTree = "<group>"; };
-		04A999721E8067BF0007F104 /* GBPerson+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBPerson+CoreDataClass.h"; sourceTree = "<group>"; };
-		04A999731E8067BF0007F104 /* GBPerson+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBPerson+CoreDataClass.m"; sourceTree = "<group>"; };
-		04A999741E8067BF0007F104 /* GBPerson+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBPerson+CoreDataProperties.h"; sourceTree = "<group>"; };
-		04A999751E8067BF0007F104 /* GBPerson+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBPerson+CoreDataProperties.m"; sourceTree = "<group>"; };
-		04A999761E8067BF0007F104 /* GBRank+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBRank+CoreDataClass.h"; sourceTree = "<group>"; };
-		04A999771E8067BF0007F104 /* GBRank+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBRank+CoreDataClass.m"; sourceTree = "<group>"; };
-		04A999781E8067BF0007F104 /* GBRank+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBRank+CoreDataProperties.h"; sourceTree = "<group>"; };
-		04A999791E8067BF0007F104 /* GBRank+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBRank+CoreDataProperties.m"; sourceTree = "<group>"; };
-		04A9997A1E8067BF0007F104 /* GBPage+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBPage+CoreDataClass.h"; sourceTree = "<group>"; };
-		04A9997B1E8067BF0007F104 /* GBPage+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBPage+CoreDataClass.m"; sourceTree = "<group>"; };
-		04A9997C1E8067BF0007F104 /* GBPage+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBPage+CoreDataProperties.h"; sourceTree = "<group>"; };
-		04A9997D1E8067BF0007F104 /* GBPage+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBPage+CoreDataProperties.m"; sourceTree = "<group>"; };
+		04A9998A1E807B170007F104 /* GBPage+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBPage+CoreDataClass.h"; sourceTree = "<group>"; };
+		04A9998B1E807B170007F104 /* GBPage+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBPage+CoreDataClass.m"; sourceTree = "<group>"; };
+		04A9998C1E807B170007F104 /* GBPage+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBPage+CoreDataProperties.h"; sourceTree = "<group>"; };
+		04A9998D1E807B170007F104 /* GBPage+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBPage+CoreDataProperties.m"; sourceTree = "<group>"; };
+		04A9998E1E807B170007F104 /* GBSite+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBSite+CoreDataClass.h"; sourceTree = "<group>"; };
+		04A9998F1E807B170007F104 /* GBSite+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBSite+CoreDataClass.m"; sourceTree = "<group>"; };
+		04A999901E807B170007F104 /* GBSite+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBSite+CoreDataProperties.h"; sourceTree = "<group>"; };
+		04A999911E807B170007F104 /* GBSite+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBSite+CoreDataProperties.m"; sourceTree = "<group>"; };
+		04A999921E807B170007F104 /* GBPerson+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBPerson+CoreDataClass.h"; sourceTree = "<group>"; };
+		04A999931E807B170007F104 /* GBPerson+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBPerson+CoreDataClass.m"; sourceTree = "<group>"; };
+		04A999941E807B170007F104 /* GBPerson+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBPerson+CoreDataProperties.h"; sourceTree = "<group>"; };
+		04A999951E807B170007F104 /* GBPerson+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBPerson+CoreDataProperties.m"; sourceTree = "<group>"; };
+		04A999961E807B170007F104 /* GBKeyWord+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBKeyWord+CoreDataClass.h"; sourceTree = "<group>"; };
+		04A999971E807B170007F104 /* GBKeyWord+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBKeyWord+CoreDataClass.m"; sourceTree = "<group>"; };
+		04A999981E807B170007F104 /* GBKeyWord+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBKeyWord+CoreDataProperties.h"; sourceTree = "<group>"; };
+		04A999991E807B170007F104 /* GBKeyWord+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBKeyWord+CoreDataProperties.m"; sourceTree = "<group>"; };
+		04A9999A1E807B170007F104 /* GBRank+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBRank+CoreDataClass.h"; sourceTree = "<group>"; };
+		04A9999B1E807B170007F104 /* GBRank+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBRank+CoreDataClass.m"; sourceTree = "<group>"; };
+		04A9999C1E807B170007F104 /* GBRank+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBRank+CoreDataProperties.h"; sourceTree = "<group>"; };
+		04A9999D1E807B170007F104 /* GBRank+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBRank+CoreDataProperties.m"; sourceTree = "<group>"; };
+		04A9999E1E807B170007F104 /* GBUser+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBUser+CoreDataClass.h"; sourceTree = "<group>"; };
+		04A9999F1E807B170007F104 /* GBUser+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBUser+CoreDataClass.m"; sourceTree = "<group>"; };
+		04A999A01E807B170007F104 /* GBUser+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBUser+CoreDataProperties.h"; sourceTree = "<group>"; };
+		04A999A11E807B170007F104 /* GBUser+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GBUser+CoreDataProperties.m"; sourceTree = "<group>"; };
 		57B642AD1E6C2BE900B2C613 /* SiSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSLoginViewController.h; sourceTree = "<group>"; };
 		57B642AE1E6C2BE900B2C613 /* SiSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSLoginViewController.m; sourceTree = "<group>"; };
 		57BE53A91E6C281600A7815C /* LoginTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,30 +147,30 @@
 		57BE53A01E6C281600A7815C = {
 			isa = PBXGroup;
 			children = (
-				04A999661E8067BF0007F104 /* GBUser+CoreDataClass.h */,
-				04A999671E8067BF0007F104 /* GBUser+CoreDataClass.m */,
-				04A999681E8067BF0007F104 /* GBUser+CoreDataProperties.h */,
-				04A999691E8067BF0007F104 /* GBUser+CoreDataProperties.m */,
-				04A9996A1E8067BF0007F104 /* GBSite+CoreDataClass.h */,
-				04A9996B1E8067BF0007F104 /* GBSite+CoreDataClass.m */,
-				04A9996C1E8067BF0007F104 /* GBSite+CoreDataProperties.h */,
-				04A9996D1E8067BF0007F104 /* GBSite+CoreDataProperties.m */,
-				04A9996E1E8067BF0007F104 /* GBKeyWord+CoreDataClass.h */,
-				04A9996F1E8067BF0007F104 /* GBKeyWord+CoreDataClass.m */,
-				04A999701E8067BF0007F104 /* GBKeyWord+CoreDataProperties.h */,
-				04A999711E8067BF0007F104 /* GBKeyWord+CoreDataProperties.m */,
-				04A999721E8067BF0007F104 /* GBPerson+CoreDataClass.h */,
-				04A999731E8067BF0007F104 /* GBPerson+CoreDataClass.m */,
-				04A999741E8067BF0007F104 /* GBPerson+CoreDataProperties.h */,
-				04A999751E8067BF0007F104 /* GBPerson+CoreDataProperties.m */,
-				04A999761E8067BF0007F104 /* GBRank+CoreDataClass.h */,
-				04A999771E8067BF0007F104 /* GBRank+CoreDataClass.m */,
-				04A999781E8067BF0007F104 /* GBRank+CoreDataProperties.h */,
-				04A999791E8067BF0007F104 /* GBRank+CoreDataProperties.m */,
-				04A9997A1E8067BF0007F104 /* GBPage+CoreDataClass.h */,
-				04A9997B1E8067BF0007F104 /* GBPage+CoreDataClass.m */,
-				04A9997C1E8067BF0007F104 /* GBPage+CoreDataProperties.h */,
-				04A9997D1E8067BF0007F104 /* GBPage+CoreDataProperties.m */,
+				04A9998A1E807B170007F104 /* GBPage+CoreDataClass.h */,
+				04A9998B1E807B170007F104 /* GBPage+CoreDataClass.m */,
+				04A9998C1E807B170007F104 /* GBPage+CoreDataProperties.h */,
+				04A9998D1E807B170007F104 /* GBPage+CoreDataProperties.m */,
+				04A9998E1E807B170007F104 /* GBSite+CoreDataClass.h */,
+				04A9998F1E807B170007F104 /* GBSite+CoreDataClass.m */,
+				04A999901E807B170007F104 /* GBSite+CoreDataProperties.h */,
+				04A999911E807B170007F104 /* GBSite+CoreDataProperties.m */,
+				04A999921E807B170007F104 /* GBPerson+CoreDataClass.h */,
+				04A999931E807B170007F104 /* GBPerson+CoreDataClass.m */,
+				04A999941E807B170007F104 /* GBPerson+CoreDataProperties.h */,
+				04A999951E807B170007F104 /* GBPerson+CoreDataProperties.m */,
+				04A999961E807B170007F104 /* GBKeyWord+CoreDataClass.h */,
+				04A999971E807B170007F104 /* GBKeyWord+CoreDataClass.m */,
+				04A999981E807B170007F104 /* GBKeyWord+CoreDataProperties.h */,
+				04A999991E807B170007F104 /* GBKeyWord+CoreDataProperties.m */,
+				04A9999A1E807B170007F104 /* GBRank+CoreDataClass.h */,
+				04A9999B1E807B170007F104 /* GBRank+CoreDataClass.m */,
+				04A9999C1E807B170007F104 /* GBRank+CoreDataProperties.h */,
+				04A9999D1E807B170007F104 /* GBRank+CoreDataProperties.m */,
+				04A9999E1E807B170007F104 /* GBUser+CoreDataClass.h */,
+				04A9999F1E807B170007F104 /* GBUser+CoreDataClass.m */,
+				04A999A01E807B170007F104 /* GBUser+CoreDataProperties.h */,
+				04A999A11E807B170007F104 /* GBUser+CoreDataProperties.m */,
 				0428563C1E7E25920017C816 /* Model */,
 				57BE53AB1E6C281600A7815C /* LoginTest */,
 				57BE53C51E6C281600A7815C /* LoginTestTests */,
@@ -384,27 +384,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04A999891E8067BF0007F104 /* GBPage+CoreDataProperties.m in Sources */,
 				57BE53B11E6C281600A7815C /* AppDelegate.m in Sources */,
-				04A9997F1E8067BF0007F104 /* GBUser+CoreDataProperties.m in Sources */,
-				04A999871E8067BF0007F104 /* GBRank+CoreDataProperties.m in Sources */,
-				04A999881E8067BF0007F104 /* GBPage+CoreDataClass.m in Sources */,
 				0421F56B1E738B7900B2E4AC /* SiSStatisticsViewController.m in Sources */,
+				04A999AF1E807B170007F104 /* GBRank+CoreDataProperties.m in Sources */,
 				57B642AF1E6C2BE900B2C613 /* SiSLoginViewController.m in Sources */,
+				04A999AA1E807B170007F104 /* GBPerson+CoreDataClass.m in Sources */,
+				04A999A71E807B170007F104 /* GBPage+CoreDataProperties.m in Sources */,
+				04A999B11E807B170007F104 /* GBUser+CoreDataProperties.m in Sources */,
+				04A999A61E807B170007F104 /* GBPage+CoreDataClass.m in Sources */,
+				04A999AC1E807B170007F104 /* GBKeyWord+CoreDataClass.m in Sources */,
 				57BE53AE1E6C281600A7815C /* main.m in Sources */,
+				04A999B01E807B170007F104 /* GBUser+CoreDataClass.m in Sources */,
 				042855CE1E7E06390017C816 /* GBInternship.xcdatamodeld in Sources */,
+				04A999A91E807B170007F104 /* GBSite+CoreDataProperties.m in Sources */,
+				04A999AE1E807B170007F104 /* GBRank+CoreDataClass.m in Sources */,
+				04A999A81E807B170007F104 /* GBSite+CoreDataClass.m in Sources */,
 				042856481E7F18130017C816 /* GBCoreDataViewController.m in Sources */,
-				04A999841E8067BF0007F104 /* GBPerson+CoreDataClass.m in Sources */,
-				04A999811E8067BF0007F104 /* GBSite+CoreDataProperties.m in Sources */,
-				04A999821E8067BF0007F104 /* GBKeyWord+CoreDataClass.m in Sources */,
-				04A999861E8067BF0007F104 /* GBRank+CoreDataClass.m in Sources */,
-				04A999801E8067BF0007F104 /* GBSite+CoreDataClass.m in Sources */,
-				04A999851E8067BF0007F104 /* GBPerson+CoreDataProperties.m in Sources */,
 				0428563F1E7E2DB80017C816 /* GBDataManager.m in Sources */,
+				04A999AB1E807B170007F104 /* GBPerson+CoreDataProperties.m in Sources */,
+				04A999AD1E807B170007F104 /* GBKeyWord+CoreDataProperties.m in Sources */,
 				0421F5681E73877500B2E4AC /* SiSRegistrationViewController.m in Sources */,
 				042856451E7E4B4A0017C816 /* GBGeneralStatisticsViewController.m in Sources */,
-				04A9997E1E8067BF0007F104 /* GBUser+CoreDataClass.m in Sources */,
-				04A999831E8067BF0007F104 /* GBKeyWord+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +484,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -533,6 +534,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;

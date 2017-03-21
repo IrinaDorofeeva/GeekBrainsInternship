@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="15G1217" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
-    <entity name="GBKeyWord" representedClassName="GBKeyWord" syncable="YES">
+    <entity name="GBKeyWord" representedClassName="GBKeyWord" parentEntity="GBObject" syncable="YES">
         <attribute name="keyWord" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="keyWordID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="personID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="person" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GBPerson" inverseName="keyWord" inverseEntity="GBPerson" syncable="YES"/>
         <relationship name="rank" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="GBRank" inverseName="keyWord" inverseEntity="GBRank" syncable="YES"/>
     </entity>
-    <entity name="GBPage" representedClassName="GBPage" syncable="YES">
+    <entity name="GBObject" representedClassName="GBObject" syncable="YES" codeGenerationType="class"/>
+    <entity name="GBPage" representedClassName="GBPage" parentEntity="GBObject" syncable="YES">
         <attribute name="foundDateTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="lastScanDateTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="pageID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -16,12 +17,12 @@
         <relationship name="rank" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="GBRank" inverseName="page" inverseEntity="GBRank" syncable="YES"/>
         <relationship name="site" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GBSite" inverseName="page" inverseEntity="GBSite" syncable="YES"/>
     </entity>
-    <entity name="GBPerson" representedClassName="GBPerson" syncable="YES">
+    <entity name="GBPerson" representedClassName="GBPerson" parentEntity="GBObject" syncable="YES">
         <attribute name="personID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="personName" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="keyWord" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="GBKeyWord" inverseName="person" inverseEntity="GBKeyWord" syncable="YES"/>
     </entity>
-    <entity name="GBRank" representedClassName="GBRank" syncable="YES">
+    <entity name="GBRank" representedClassName="GBRank" parentEntity="GBObject" syncable="YES">
         <attribute name="dateOfScan" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="keyWordID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="pageID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -29,7 +30,7 @@
         <relationship name="keyWord" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GBKeyWord" inverseName="rank" inverseEntity="GBKeyWord" syncable="YES"/>
         <relationship name="page" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GBPage" inverseName="rank" inverseEntity="GBPage" syncable="YES"/>
     </entity>
-    <entity name="GBSite" representedClassName="GBSite" syncable="YES">
+    <entity name="GBSite" representedClassName="GBSite" parentEntity="GBObject" syncable="YES">
         <attribute name="siteID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="siteName" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="page" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="GBPage" inverseName="site" inverseEntity="GBPage" syncable="YES"/>
@@ -41,10 +42,11 @@
     </entity>
     <elements>
         <element name="GBKeyWord" positionX="-4734" positionY="-3735" width="128" height="118"/>
-        <element name="GBPage" positionX="-4419" positionY="-3757" width="128" height="148"/>
+        <element name="GBPage" positionX="-4376" positionY="-3834" width="128" height="148"/>
         <element name="GBPerson" positionX="-4907" positionY="-3706" width="128" height="88"/>
         <element name="GBRank" positionX="-4572" positionY="-3807" width="128" height="133"/>
-        <element name="GBSite" positionX="-4502" positionY="-3564" width="128" height="88"/>
+        <element name="GBSite" positionX="-4430" positionY="-3616" width="128" height="88"/>
         <element name="GBUser" positionX="-4905" positionY="-3870" width="128" height="88"/>
+        <element name="GBObject" positionX="-4601" positionY="-3870" width="128" height="43"/>
     </elements>
 </model>
