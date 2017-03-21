@@ -27,54 +27,12 @@
 @synthesize fetchedResultsController = _fetchedResultsController;
 
 
-
-/*- (NSFetchedResultsController *)fetchedResultsController
-{
-    if (_fetchedResultsController != nil) {
-        return _fetchedResultsController;
-    }
-    
-    NSFetchRequest* fetchRequest = [[NSFetchRequest alloc] init];
-    
-    NSEntityDescription* description =
-    [NSEntityDescription entityForName:@"GBPerson"
-                inManagedObjectContext:self.managedObjectContext];
-    
-    [fetchRequest setEntity:description];
-    
-    NSSortDescriptor* nameDescription =
-    [[NSSortDescriptor alloc] initWithKey:@"personName" ascending:YES];
-    
-    [fetchRequest setSortDescriptors:@[nameDescription]];
-    
-    // Edit the section name key path and cache name if appropriate.
-    // nil for section name key path means "no sections".
-    NSFetchedResultsController *aFetchedResultsController =
-    [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
-                                        managedObjectContext:self.managedObjectContext
-                                          sectionNameKeyPath:nil
-                                                   cacheName:@"Master"];
-    aFetchedResultsController.delegate = self;
-    self.fetchedResultsController = aFetchedResultsController;
-    
-    NSError *error = nil;
-    if (![self.fetchedResultsController performFetch:&error]) {
-        // Replace this implementation with code to handle the error appropriately.
-        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
-    }
-    
-    return _fetchedResultsController;
-}*/
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     //getting data from data base
     
-NSFetchRequest* request = [[NSFetchRequest alloc] init];
+    NSFetchRequest* request = [[NSFetchRequest alloc] init];
     NSEntityDescription* description =
     [NSEntityDescription entityForName:@"GBPerson"
                 inManagedObjectContext:self.managedObjectContext];
@@ -107,18 +65,13 @@ NSFetchRequest* request = [[NSFetchRequest alloc] init];
         NSLog(@"%@", [requestError localizedDescription]);
     }
     
+    _pickedSiteTextField.inputView=[self createPicker];
+    //_sitePicker.hidden=true;
     
-  /*  NSPredicate* predicate = [NSPredicate predicateWithFormat:@"rank.page.pageURL == %@", _sitePickedLabel];
-    [request setPredicate:predicate];
-    requestError = nil;
-    _filteredRanksArray = [self.managedObjectContext executeFetchRequest:request error:&requestError];
-    if (requestError) {
-        NSLog(@"%@", [requestError localizedDescription]);
+    
     }
 
-    NSLog(@"filteres array size %d",_filteredRanksArray.count);*/
 
-}
 -(void) updateRankArray{
     
     NSFetchRequest* request = [[NSFetchRequest alloc] init];
@@ -128,14 +81,10 @@ NSFetchRequest* request = [[NSFetchRequest alloc] init];
     NSError* requestError = nil;
     
     
-    [request setPredicate:[NSPredicate predicateWithFormat:@"page.pageURL ==  %@",_sitePickedLabel.text ]];
-    //[request setPredicate:[NSPredicate predicateWithFormat:@"keyWord.keyWord ==  %@",_personPickedLabel.text ]];
-    
-   // [request setPredicate:[NSPredicate predicateWithFormat:@"page.pageURL ==  %@ AND  keyWord.keyWord ==  %@",_sitePickedLabel.text,_personPickedLabel.text ]];
+    [request setPredicate:[NSPredicate predicateWithFormat:@"page.pageURL ==  %@",_pickedSiteTextField.text]];
    
-    
-    //[request setPredicate: [NSPredicate predicateWithFormat:@"SUBQUERY(rank, $rank, $rank.page.pageURL == %@)", @"rbc.ru"]];
-    
+       // [request setPredicate:[NSPredicate predicateWithFormat:@"page.pageURL ==  %@ AND  keyWord.keyWord ==  %@",_sitePickedLabel.text,_personPickedLabel.text ]];
+   
     _filteredRanksArray = [self.managedObjectContext executeFetchRequest:request error:&requestError];
     if (requestError) {
         NSLog(@"%@", [requestError localizedDescription]);
@@ -204,17 +153,16 @@ return count;
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row
       inComponent:(NSInteger)component
 {
-   // float rate = [_exchangeRates[row] floatValue];
-    //float dollars = [_dollarText.text floatValue];
-    //float result = dollars * rate;
+   
     if(pickerView.tag == personPicker)
     {
     GBPerson* person = (GBPerson*) _personsArray[row];
     NSString *resultString = [[NSString alloc] initWithFormat:
                               @"%@",
                               person.personName];
- 
-    _personPickedLabel.text = resultString;
+      
+      
+        
         
         [self updateRankArray];
         [_ranksTable reloadData];
@@ -226,11 +174,14 @@ return count;
                                   @"%@",
                                   site.siteName];
         
-        _sitePickedLabel.text = resultString;
+        _pickedSiteTextField.text = resultString;
+        [_pickedSiteTextField resignFirstResponder];
         [self updateRankArray];
         [_ranksTable reloadData];
-    
-    
+        
+        
+        
+
     }
 }
 
@@ -255,7 +206,7 @@ return count;
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1  reuseIdentifier:CellIdentifier];
     }
     
     GBRank* rank = (GBRank*) _filteredRanksArray[indexPath.row];
@@ -264,14 +215,46 @@ return count;
         //                      site.siteName];
     
    // Music *obj = [arrData objectAtindex:indexPath.row];
-    cell.textLabel.text = [[NSString alloc] initWithFormat:
-                                                  @"%hd is for %@ on %@",rank.rank, rank.keyWord.keyWord, rank.page.pageURL];
+    //cell.textLabel.text = [[NSString alloc] initWithFormat:
+                                              //    @"%hd is for %@ on %@",rank.rank, rank.keyWord.keyWord, rank.page.pageURL];
+    
+    
+    cell.textLabel.text = [[NSString alloc] initWithFormat:@"%@",rank.keyWord.keyWord];
+    //cell.textLabel.textAlignment = NSTextAlignmentLeft;
+    cell.detailTextLabel.text = [[NSString alloc] initWithFormat:@"%hd",rank.rank];;
+    //cell.detailTextLabel.textAlignment=NSTextAlignmentRight;
     // Configure the cell...
-    // cell.textLabel.text = @"*******************************";
+    
     return cell;
 }
 
 
+
+
+
+// popover with picker for sites
+
+- (UIView *)createPicker {
+    
+    UIView *pickerView = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height, self.view.frame.size.width, 216)];
+    
+    pickerView.backgroundColor = [UIColor whiteColor];
+   //UIPickerView *picker = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 45, 300, 120)];
+    
+    [pickerView addSubview: _sitePicker];
+    _sitePicker.center = CGPointMake(pickerView.frame.size.width  / 2,
+                                     pickerView.frame.size.height / 2);
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 40)];
+    
+    [titleLabel setTextColor:[UIColor blackColor]];
+    [titleLabel setBackgroundColor:[UIColor colorWithRed:76/255.0 green:175/255.0 blue:80/255.0 alpha:1]];
+    [titleLabel setFont:[UIFont fontWithName: @"Trebuchet MS" size: 16.0f]];
+    titleLabel.text=@"Choose Site";
+    titleLabel.textAlignment= NSTextAlignmentCenter;
+    [pickerView addSubview:titleLabel];
+    
+    return pickerView;
+}
 
 
 

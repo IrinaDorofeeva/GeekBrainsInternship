@@ -21,12 +21,12 @@
     
 // uncomment [[GBDataManager sharedManager] addData] and run one time to populate core data
     
-     [[GBDataManager sharedManager] addData];
+     //[[GBDataManager sharedManager] addData];
     
     
     
-   // [[GBDataManager sharedManager] deleteData];
-   // [[GBDataManager sharedManager] addData];
+    [[GBDataManager sharedManager] deleteData];
+    [[GBDataManager sharedManager] addData];
    // [[GBDataManager sharedManager] printData];
     
     

@@ -10,18 +10,16 @@
 #import "GBCoreDataViewController.h"
 
 
-@interface GBGeneralStatisticsViewController : GBCoreDataViewController <UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate>
+@interface GBGeneralStatisticsViewController : GBCoreDataViewController <UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate, UITextFieldDelegate>
 
 @property (strong, nonatomic) NSArray *personsArray;
 @property (strong, nonatomic) NSArray *sitesArray;
 @property (strong, nonatomic) NSArray *ranksArray;
 @property (strong, nonatomic) NSArray *filteredRanksArray;
 
+@property (weak, nonatomic) IBOutlet UITextField *pickedSiteTextField;
 
 @property (weak, nonatomic) IBOutlet UIPickerView *personPicker;
-@property (weak, nonatomic) IBOutlet UILabel *personPickedLabel;
-@property (weak, nonatomic) IBOutlet UILabel *sitePickedLabel;
-
 @property (weak, nonatomic) IBOutlet UIPickerView *sitePicker;
 @property (weak, nonatomic) IBOutlet UITableView *ranksTable;
 @end
